@@ -281,5 +281,7 @@ $route['chinh-sach-ban-quyen'] = 'frontend/security/security_2';
 $route['chinh-sach-quang-cao'] = 'frontend/security/security_3';
 
 $route['thong-tin-bac-si'] = 'frontend/doctor';
+$route['giai-dap-thac-mac'] = 'frontend/answer';
+$route['tra-cuu'] = 'frontend/lookup';
 
 $route['dat-lich-hen'] = 'frontend/booking';

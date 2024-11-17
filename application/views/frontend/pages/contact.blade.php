@@ -5,7 +5,7 @@
     <div class="row" style="margin-top: 40px;">
         <div class="col-lg-8 col-md-8 col-sm-8" style="margin-top: 15px;">
             <div class="panel-blog">
-                <h2><span>Liên hệ với chúng tôi</span></h2>
+                <h2><span>Tra cứu</span></h2>
             </div>
             <div class="contact_area">
                 <p>{{$_CI->website->website[0]['website_intro']}}</p>

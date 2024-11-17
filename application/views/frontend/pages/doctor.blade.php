@@ -3,7 +3,34 @@
 @section('main_views')
 <section id="sliderSection">
     <div class="row" style="margin-top: 40px;">
+
         <div class="col-lg-8 col-md-8 col-sm-8" style="margin-top: 15px;">
+            <div class="container">
+                <form class="p-4 border rounded bg-light">
+                    <div class="row mb-3">
+                        <!-- Cột nhập tên bác sĩ -->
+                        <div class="col-md-6">
+                            <label for="doctorName" class="form-label">Nhập tên bác sĩ:</label>
+                            <input type="text" class="form-control" id="doctorName" placeholder="Nhập tên bác sĩ">
+                        </div>
+                        <!-- Cột chọn chuyên khoa -->
+                        <div class="col-md-6">
+                            <label for="specialization" class="form-label">Chuyên khoa:</label>
+                            <select class="form-select" id="specialization">
+                                <option selected>Chọn hết</option>
+                                <option value="1">Chuyên khoa 1</option>
+                                <option value="2">Chuyên khoa 2</option>
+                                <option value="3">Chuyên khoa 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-left">
+                            <button type="submit" class="btn btn-primary">Tìm Kiếm</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
             <div class="container my-4">
                 <div class="row">
                     <!-- Danh sách bác sĩ -->
@@ -69,7 +96,7 @@
                                             </h2>
                                             <div id="collapsePosition" class="accordion-collapse collapse show" aria-labelledby="headingPosition">
                                                 <div class="accordion-body">
-                                                    <p id="doctorPosition">Bác sĩ hợp đồng khoa khám bệnh</p>
+                                                    <p id="doctorPosition" style="color: black;">Bác sĩ hợp đồng khoa khám bệnh</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -145,7 +172,7 @@
         // Cập nhật nội dung modal
         document.getElementById('doctorName').textContent = name;
         document.getElementById('doctorBirthYear').textContent = `Năm sinh: ${birthYear}`;
-        document.getElementById('doctorPosition').textContent = `Chức vụ: ${position}`;
+        document.getElementById('doctorPosition').textContent = position;
         document.getElementById('doctorSpecialty').textContent = `Học hàm, học vị: ${specialty}`;
         document.getElementById('doctorDegree').textContent = `Chuyên khoa: ${degree}`;
         document.getElementById('doctorEmail').textContent = `Email: ${email}`;
@@ -285,10 +312,14 @@
         color: #343a40;
     }
 
+    .accordion-body ul {
+        padding-left: 0px;
+    }
+
     /* Doctor Image Modal */
     .doctor-image-modal {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
         object-fit: cover;
         margin-right: 15px;
         border: 2px solid #ccc;
