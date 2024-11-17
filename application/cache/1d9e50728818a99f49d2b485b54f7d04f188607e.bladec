@@ -1,0 +1,13 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('main_views'); ?>
+ <?php 
+ $cart = $_CI->cart->contents();
+ ?>
+ <section class="section-paddingY cart-page">
+ <?php echo $this->runChild('frontend.components._cart_container', ['cart' => $cart]); ?>
+ </section>
+ 
+<?php $this->stopSection(); ?>
+
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

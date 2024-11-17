@@ -1,0 +1,46 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('main_views'); ?>
+ <section class="section-paddingY user-page">
+ <div class="container">
+ <div class="section-header">
+ <p class="section-title"><?php echo static::e($title); ?></p>
+ </div>
+ <div class="section-body">
+ <div class="row">
+ <div class="col-12 col-lg-3">
+ <div class="sidebar-container">
+ <ul>
+ <li>
+ <a href="<?php echo static::e(base_url('thong-tin-ca-nhan')); ?>">Thông tin</a>
+ </li>
+ <li>
+ <a href="<?php echo static::e(base_url('don-hang')); ?>">Đơn hàng</a>
+ </li>
+ <li>
+ <a href="<?php echo static::e(base_url('email')); ?>">Đổi email liên hệ</a>
+ </li>
+ <li>
+ <a href="<?php echo static::e(base_url('mat-khau')); ?>">Đổi mật khẩu</a>
+ </li>
+ </ul>
+ </div>
+ </div>
+ <div class="col-12 col-lg-9">
+ <div class="user-main-view-container">
+ <?php if(empty($view)): ?>
+ <div>
+ <h3 class="text-center">Xin chào <?php echo static::e($_CI->session->firstname); ?></h3>
+ </div>
+ <?php else: ?>
+ <?php echo $this->runChild($view, $nested_view_data); ?>
+ <?php endif; ?>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+<?php $this->stopSection(); ?>
+
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

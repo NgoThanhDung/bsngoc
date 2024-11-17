@@ -1,0 +1,12 @@
+<div class="user-index-page statistic-page">
+ <div class="row">
+
+ <?php /* <div class="col-12 col-sm-6 col-md-4">
+ <div class="statistic-item-container total-orders">
+ <h5 class='title'>Đơn hàng</h5>
+ <h4>0</h4>
+ </div>
+ </div> */ ?>
+
+ </div>
+</div>

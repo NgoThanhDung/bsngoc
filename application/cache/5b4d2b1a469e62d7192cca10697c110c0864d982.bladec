@@ -1,0 +1,4 @@
+<h1>Hello</h1>
+<p>Is it me u'r looking for ???</p>
+<?php echo static::e($test); ?>
+

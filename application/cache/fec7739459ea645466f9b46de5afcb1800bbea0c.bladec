@@ -1,0 +1,42 @@
+ <?php $_shouldextend[1]=1; ?>
+
+ <?php $this->startSection('main_views'); ?>
+ <!-- HERO SECTION PART START -->
+ <div class="hero_section">
+ <div class="png_img"><img class="w-100 img-fluid" src="img/leaf.png" alt="" /></div>
+ <div class="container">
+ <div class="row">
+ <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+ <div class="herosection_content">
+ <h2>404_Error</h2>
+ <a href="index.html" class="btn border-radius-0 border-transparent">Home - Pages</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!--HERO SECTION PART -->
+
+ <!-- ERROR PART START -->
+ <div class="error_part">
+ <div class="container">
+ <div class="row align-items-center">
+ <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+ <div class="error_content">
+ <h4>Opps......This page is not found.</h4>
+ <p>Botanically, the strawberry fruit is considered an “accessory fruit” and is not a true berry. The flesh consists of the greatly nlarged flower receptacle.</p>
+ <a href="index.html" class="btn"><i class="icofont-arrow-left"></i>Back To Home</a>
+ </div>
+ </div>
+ <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+ <div class="error_img">
+ <img src="img/Error_404.png" class="w-100 img-fluid" alt="" />
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- ERROR PART END -->
+ <?php $this->stopSection(); ?>
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

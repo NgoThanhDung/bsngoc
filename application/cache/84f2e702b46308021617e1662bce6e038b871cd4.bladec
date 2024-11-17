@@ -1,0 +1,105 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('main_views'); ?>
+<!-- Page Title-->
+<div class="page-main-title">
+	<div class="container">
+ <div class="row align-items-center">
+ <div class="col-lg-6">
+ <h1 class="entry-title">Blog Left Sidebar</h1>
+ <p>Duis auctor eros ac urna dictum, eget rhoncus ex fringilla. Vestibulum in ex massa. Sed accumsan tortor libero. Phasellus gravida nibh vel odio semper vitae.</p>
+ </div>
+ </div>
+	</div>
+</div>
+<!-- End Page Title-->
+<div class="container mt-8">
+	<div class="row large-gutters">
+ <div class="col-lg-8 order-lg-2 mb-7">
+ <!-- Blog-->
+ <div class="row gx-5 blog-post card-post-style">
+ <?php if($news!=null){ ?>
+ <?php foreach ($news as $item) { ?>
+ <div class="col-md-12 col-lg-12">
+ <article>
+ <figure class="entry-media"><a href="<?php echo base_url() ?>tin-tuc/<?php echo $item['alias'] ?>/<?php echo $item['id'] ?>"><img class="img-blog" src="<?php echo base_url() ?><?php echo $item['thumbnail'] ?>" alt="Entry Image" /></a>
+ </figure>
+ <div class="entry-content-wrapper">
+ <header class="entry-header">
+ <div class="entry-meta-top"><span class="entry-meta-category"><i class="fas fa-folder"></i><a href="#">Photography</a></span><span class="entry-author"><i class="far fa-user"></i>Amjad Ali</span><span class="entry-meta-date"> <i class="far fa-clock"></i>March 22, 2020</span><span class="entry-comment-count"><a href="blog-single-post.html#comments"><i class="far fa-comment-alt"></i>2</a></span><span class="entry-comment-count"><a href="#"><i class="far fa-edit"></i>Edit</a></span>
+ </div>
+ <h2 class="entry-title"><a href="<?php echo base_url() ?>tin-tuc/<?php echo $item['alias'] ?>/<?php echo $item['id'] ?>"><?php echo $item['name'] ?></a></h2>
+ </header>
+ <div class="entry-content">
+ <p><?php echo $item['caption'] ?></p>
+ </div>
+ <footer class="entry-footer"><a class="entry-read-more" href="<?php echo base_url() ?>tin-tuc/<?php echo $item['alias'] ?>/<?php echo $item['id'] ?>">Read More<i class="fas fa-long-arrow-alt-right ml-1"></i></a></footer>
+ </div>
+ </article>
+ </div>
+ <?php } ?>
+ <?php }else{ ?>	
+ <div class="col-md-12 col-lg-12">
+ <h3 style="text-align: center;">There are 0 search results</h3>
+ </div>	
+ <?php } ?>
+ </div>
+ <!-- End Blog-->
+ </div>
+ <div class="col-lg-4 order-lg-1">
+ <!-- Sidebar-->
+ <aside class="widget">
+ <form class="search-form" role="search" action="<?php echo base_url() ?>tin-tuc/tim-kiem" method="get">
+ <div class="input-group">
+ <input class="form-control" type="text" placeholder="Search" name="q">
+ <div class="input-group-append">
+ <button class="btn bt" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+ </div>
+ </div>
+ </form>
+ </aside>
+ <!-- Top Posts-->
+ <aside class="widget">
+ <h5 class="widget-title">Top Posts</h5>
+ <div class="simple-entry-list blog-post">
+ <?php foreach ($recent_post as $item) { ?>
+ <article>
+ <div class="entry-content-wrapper">
+ <div class="entry-header">
+ <h2 class="entry-title"><a href="<?php echo base_url() ?>tin-tuc/<?php echo $item['alias'] ?>/<?php echo $item['id'] ?>"><?php echo $item['name'] ?></a></h2>
+ <div class="entry-meta-top"><span class="entry-meta-category"><i class="fas fa-folder"></i><a href="blog-three-col.html">Photography</a></span><span class="entry-author"><i class="far fa-user"></i>Amjad Ali</span>
+ </div>
+ </div>
+ </div>
+ </article>
+ <?php } ?>
+
+
+ </div>
+ </aside>
+ <!-- Categories-->
+ <aside class="widget widget_categories">
+ <h5 class="widget-title">Categories</h5>
+ <ul>
+ <?php foreach ($category as $item) { ?>
+ <li><a href="<?php echo base_url() ?>tin-tuc/<?php echo $item['id'] ?>"><?php echo $item['name'] ?></a></li>
+ <?php } ?>
+
+ </ul>
+ </aside>
+ <!-- Sidebar End-->
+ </div>
+	</div>
+</div>
+
+
+
+<style>
+	.img-blog {
+ width: 842px;
+ height: 561px;
+	}
+</style>
+
+<?php $this->stopSection(); ?>
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

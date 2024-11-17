@@ -1,0 +1,41 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('main_views'); ?>
+ <section class="section-paddingY auth-page">
+ <div class="container">
+ <div class="section-header">
+ <p class="section-title">Xác thực tài khoản</p>
+ <p class="section-subtitle">
+ Hãy cho chúng tôi biết email bạn đã đăng kí<br/>
+ để chúng tôi giúp bạn xác thực tài khoản
+ </p>
+ </div>
+ <div class="section-body">
+ <div class="row">
+ <div class="col-12">
+ <div class="singin-form-container email-confirmation-container auth-form-container">
+ <div class="header">
+ <p class="title">Email bạn đã đăng kí là gì ?</p>
+ </div>
+ <div class="body">
+ <?php echo form_open(base_url('xac-thuc/gui-lai')); ?>
+
+ <div class="auth-control">
+ <input type="email" name="email" required="required" placeholder="Email" autocomplete="off" />
+ </div>
+ <div class="auth-control">
+ <button class="signin-button dark-button" type="submit">Gửi email cho tôi</button>
+ </div>
+ <?php echo form_close(); ?>
+
+ </div>
+ <div class="footer"></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+<?php $this->stopSection(); ?>
+
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

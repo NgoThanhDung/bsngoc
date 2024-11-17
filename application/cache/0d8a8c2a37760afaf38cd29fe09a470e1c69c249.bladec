@@ -1,0 +1,91 @@
+<span class="toggle-product-filter js-toggle-product-filter">
+ <i class="fas fa-filter"></i>
+</span>
+<div class="product-filter-sidebar js-product-filter depth1">
+ <div class="product-filter-container">
+ <div class="product-filter-block product-filter-color">
+ <div class="title">
+ <h4>
+ Màu sắc
+ <i class="fas fa-caret-down dropdown-filter-block js-dropdown-filter-block"></i>
+ </h4>
+ </div>
+ <div class="body">
+ <ul class="color-list list-has-checkbox">
+ <?php $__currentLoopData = $colors; $this->addLoop($__currentLoopData); foreach($__currentLoopData as $color): $this->incrementLoopIndices(); $loop = $this->getFirstLoop(); ?>
+ <li>
+ <label class="custom-checkbox">
+ <input type="checkbox" class="js-filter-on-change" name="color_filter[]" value="<?php echo static::e($color['id']); ?>">
+ <span class="fake-input"></span>
+ <span class="color-sample depth1" style="background-color: <?php echo static::e($color['hex']); ?>"></span>
+ <span class="text"><?php echo static::e($color['name']); ?></span>
+ </label>
+ </li>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </ul>
+ </div>
+ </div>
+
+ <div class="product-filter-block product-filter-size">
+ <div class="title">
+ <h4>
+ Kích thước
+ <i class="fas fa-caret-down dropdown-filter-block js-dropdown-filter-block"></i>
+ </h4>
+ </div>
+ <div class="body">
+ <ul class="size-list list-has-checkbox">
+ <?php $__currentLoopData = $sizes; $this->addLoop($__currentLoopData); foreach($__currentLoopData as $size): $this->incrementLoopIndices(); $loop = $this->getFirstLoop(); ?>
+ <li>
+ <label class="custom-checkbox">
+ <input type="checkbox" class="js-filter-on-change" name="size_filter[]" value="<?php echo static::e($size['id']); ?>">
+ <span class="fake-input"></span>
+ <span class="text"><?php echo static::e($size['name']); ?></span>
+ </label>
+ </li>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </ul>
+ </div>
+ </div>
+
+ <div class="product-filter-block product-filter-price">
+ <div class="title">
+ <h4>
+ Giá tiền
+ <i class="fas fa-caret-down dropdown-filter-block js-dropdown-filter-block"></i>
+ </h4>
+ </div>
+ <div class="body">
+ <ul class="size-list list-has-checkbox">
+ <?php 
+ $min_price = $min_max_price['min_price'];
+ $max_price = $min_max_price['max_price'];
+ $middle_price    = $min_price + round(($max_price-$min_price)/2);
+ ?>
+ <li>
+ <label class="custom-radio">
+ <input type="radio" checked class="js-filter-on-change" name="price_filter" value="0,">
+ <span class="fake-input"></span>
+ <span class="text">Tất cả</span>
+ </label>
+ </li>
+ <li>
+ <label class="custom-radio">
+ <input type="radio" class="js-filter-on-change" name="price_filter" value="<?php echo static::e($min_price.",".$middle_price); ?>">
+ <span class="fake-input"></span>
+ <span class="text">Từ <?php echo static::e(format_money($min_price)); ?> Tới <?php echo static::e(format_money($middle_price)); ?></span>
+ </label>
+ </li>
+ <li>
+ <label class="custom-radio">
+ <input type="radio" class="js-filter-on-change" name="price_filter" value="<?php echo static::e($middle_price.",".$max_price); ?>">
+ <span class="fake-input"></span>
+ <span class="text">Từ <?php echo static::e(format_money($middle_price)); ?> Tới <?php echo static::e(format_money($max_price)); ?></span>
+ </label>
+ </li>
+ </ul>
+ </div>
+ </div>
+
+ </div>
+</div>

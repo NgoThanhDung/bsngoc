@@ -1,0 +1,120 @@
+.sidebar {
+	.one-widget {
+		&.action-button {
+			.actions {
+				input {
+					display       : inline-block;
+					margin-bottom : 5px;
+
+					&:last-child {
+						margin-bottom : 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.create-product-form {
+
+}
+
+#options_modal .mb-3 {
+	display : inline-block !important;
+	margin  : 0 20px 0 0
+}
+
+#options_modal {
+	.color_review {
+		width         : 15px;
+		height        : 15px;
+		vertical-align: middle;
+		margin-right  : 30px;
+		border-radius : 50%;
+		border        : 1px solid #aaa;
+		float: right;
+	}
+}
+
+.remove-option-item {
+	color       : red;
+	font-weight : bold;
+}
+
+.add-more-option-item {
+	font-size : 30px;
+	cursor    : pointer;
+}
+
+#product_list_datatable .product-image {
+	max-width : 80px;
+}
+
+/* gallery */
+.product-gallery-preview {
+	height   : 100px;
+	overflow : auto;
+	width    : 100%;
+	border   : 2px dashed purple;
+
+	.product-gallery-images {
+		max-width : 70px; max-height : 70px;
+		margin    : 4px;
+	}
+}
+
+/* SẢN PHẨM - PHIÊN BẢN */
+.version-list {
+	li {
+		display : block;
+
+		a {
+			display : block;
+			padding : 15px
+		}
+	}
+
+
+	&.active {
+		background-color : #2c304d;
+
+		a {
+			color : #fff;
+		}
+	}
+}
+
+.add-more-version-button {
+	//display: inline-block;
+	font-size      : 30px;
+	vertical-align : middle;
+	display        : none;
+}
+
+
+.is-paid-button {
+	cursor              : pointer;
+	user-select         : none;
+	-webkit-user-select : none;
+}
+
+.cates-widget {
+	.submenu {
+		margin-left : 20px;
+	}
+
+	input[type=checkbox] {
+		cursor : pointer;
+	}
+}
+
+.product-version-list-container {
+	li {
+		&.active {
+			a {
+				color: #fff;
+				background-color: $main-color;
+			}
+		}
+	}
+}

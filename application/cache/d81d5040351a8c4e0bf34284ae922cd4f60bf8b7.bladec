@@ -1,0 +1,23 @@
+<?php $_shouldextend[1]=1; ?>
+
+
+<?php $this->startSection('main_views'); ?>
+ <section class="section-paddingY">
+ <div class="container">
+ <div class="row">
+ <div class="col-12">
+ <h4>
+ Chúng tôi đã nhận được đơn hàng từ bạn. <br>
+ Chúng tôi sẽ liên lạc với bạn sớm nhất có thể để xác nhận đơn hàng. <br>
+ Cảm ơn bạn đã tin tưởng chúng tôi.
+ </h4>
+ <p>
+ Bấm vào <a href="<?php echo static::e(base_url('san-pham/tat-ca')); ?>"><b><i>đây</i></b></a> để quay lại cửa hàng
+ </p>
+ </div>
+ </div>
+ </div>
+ </section>
+<?php $this->stopSection(); ?>
+
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

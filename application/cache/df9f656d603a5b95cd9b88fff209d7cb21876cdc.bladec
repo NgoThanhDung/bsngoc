@@ -1,0 +1,21 @@
+<?php $__currentLoopData = $cart; $this->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $this->incrementLoopIndices(); $loop = $this->getFirstLoop(); ?>
+ <?php 
+ $options = $item['options'];
+ ?>
+ <li class="cart-item" data-rowid="<?php echo static::e($item['rowid']); ?>">
+ <p class="product-name"><?php echo static::e($item['name']); ?></p>
+ <?php if($options['has_detail']): ?>
+ <p class="options">
+ <span><?php echo static::e($options['color']); ?> / </span>
+ <span><?php echo static::e($options['size']); ?></span>
+ </p>
+ <?php endif; ?>
+ <p class="subtotal">
+ <span class="quantity"><?php echo static::e($item['qty']); ?></span>
+ <span class="multi">x</span>
+ <span class="price"><?php echo static::e(format_money($item['price'])); ?></span>
+ <span class="equal">=</span>
+ <span class="money"><?php echo static::e(format_money($item['subtotal'])); ?></span>
+ </p>
+ </li>
+<?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>

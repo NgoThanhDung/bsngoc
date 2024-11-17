@@ -1,0 +1,46 @@
+<div class="user-order-details-page">
+ <div class="row">
+ <?php 
+ $total = 0;
+ ?>
+
+ <?php $__currentLoopData = $order_details; $this->addLoop($__currentLoopData); foreach($__currentLoopData as $detail): $this->incrementLoopIndices(); $loop = $this->getFirstLoop(); ?>
+ <?php 
+ $subtotal = $detail['detail_price']*$detail['detail_quantity'];
+ $total += $subtotal;
+ ?>
+ <div class="col-12">
+ <div class="order-detail-container">
+ <ul>
+ <li>
+ <div class="img">
+ <img src="<?php echo static::e(base_url($detail['detail_img'])); ?>" alt="">
+ </div>
+ <div class="info">
+ <p class="name"><?php echo static::e($detail['detail_name']); ?></p>
+ <p class="quantity"><?php echo static::e($detail['detail_quantity']); ?></p>
+ <p class="price"><?php echo static::e(format_money($detail['detail_price'])); ?></p>
+ </div>
+ <div class="subtotal"><?php echo static::e(format_money($subtotal)); ?></div>
+ </li>
+ </ul>
+ </div>
+ </div>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ <div class="col-12">
+ <div class="summary">
+ <ul>
+ <li class="shipping-fee">
+ <span>Phí ship:</span>
+ <span><?php echo static::e(format_money($detail['shipping_fee'])); ?></span>
+ </li>
+ <li class="total">
+ <span>Tổng cộng: </span>
+ <span><?php echo static::e(format_money($detail['shipping_fee']+$total)); ?></span>
+ </li>
+ </ul>
+ </div>
+ </div>
+
+ </div>
+</div>

@@ -1,0 +1,30 @@
+<!-- <div class="user-header d-none d-lg-block">
+ <a href="#/" class="user-header-button js-toggle-user-nav">
+ <img src="<?php echo static::e(frontend('assets/img/icons/user.svg')); ?>" alt="user-icon"/>
+ </a>
+ <ul class="user-nav-header">
+ <?php /* Library Policy.php */ ?>
+ <?php if($_CI->policy->can_guest()): ?>
+ <li>
+ <a href="<?php echo static::e(base_url('dang-nhap#login')); ?>">Đăng nhập</a>
+ </li>
+ <li>
+ <a href="<?php echo static::e(base_url('dang-ky#register')); ?>">Đăng ký</a>
+ </li>
+ <?php endif; ?>
+ <?php if($_CI->policy->can_user()): ?>
+ <li>
+ <a href="<?php echo static::e(base_url('trang-ca-nhan')); ?>">Thông tin cá nhân</a>
+ </li>
+ <li>
+ <a href="<?php echo static::e(base_url('don-hang')); ?>">Đơn hàng</a>
+ </li>
+ <?php endif; ?>
+ <?php if($_CI->policy->can_member()): ?>
+ <li class="divider"></li>
+ <li>
+ <a href="<?php echo static::e(base_url('dang-xuat')); ?>">Đăng xuất</a>
+ </li>
+ <?php endif; ?>
+ </ul>
+</div> -->

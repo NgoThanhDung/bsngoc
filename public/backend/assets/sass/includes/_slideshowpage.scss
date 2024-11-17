@@ -1,0 +1,29 @@
+.one-slide {
+  margin-bottom: 20px;
+  position: relative;
+  .remove-slide-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: red;
+    font-weight: bold;
+    border-radius: 0 5px 0 0;
+    cursor: pointer;
+    background-color: $main-color;
+    color: #fff;
+    width: 30px; height: 30px;
+    display: flex; justify-content: center; align-items: center;
+  }
+  .image-box {
+    height: 200px;
+    border: 1px dashed $main-color;
+    border-radius: 5px;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+      // max-height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

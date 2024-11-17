@@ -1,0 +1,38 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('main_views'); ?>
+ <section class="section-paddingY search-result">
+ <div class="container">
+ <div class="section-header">
+ <p class="section-title">Tìm kiếm</p>
+ <span class="section-subtitle">Có <?php echo static::e(count($products)); ?> kết quả tìm kiếm</span>
+ </div>
+ <div class="section-body">
+ <p>
+ Kết quả tìm kiếm cho
+ <b>"<?php echo static::e($search_keyword); ?>"</b>
+ </p>
+ <div class="row">
+ <?php $__currentLoopData = $products; $this->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $this->incrementLoopIndices(); $loop = $this->getFirstLoop(); ?>
+ <div class="col-6 col-sm-6 col-lg-4 col-xl-3">
+ <?php echo $this->runChild('frontend.components._product_column', ['product' => $product]); ?>
+ </div>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+
+ </div>
+ </div>
+ <?php /* <div class="section-bottom has-pagination">
+ <div class="website-pagination">
+ <ul>
+ <li><a class="active" href="#/">1</a></li>
+ <li><a href="#/">2</a></li>
+ <li><a href="#/">3</a></li>
+ </ul>
+ </div>
+ </div> */ ?>
+ </div>
+ </section>
+
+<?php $this->stopSection(); ?>
+
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

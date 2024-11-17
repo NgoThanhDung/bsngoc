@@ -1,0 +1,646 @@
+/* compiled by scssphp v0.3.3 on Sat, 16 Nov 2024 12:24:37 +0700 (0.2472s) */
+
+/* line 5, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+/* line 6, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+label.label-bold {
+  color: #000;
+  font-weight: bold !important;
+  text-transform: uppercase;
+}
+/* line 14, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+/* line 15, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+span.label-bold {
+  color: #000;
+  font-weight: bold !important;
+}
+/* line 21, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+input.slug[name=slug] {
+  border: 0;
+  background-color: #ebebee;
+  width: 200px;
+  padding: 4px;
+}
+/* line 29, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.linethrough {
+  text-decoration: line-through;
+}
+/* line 33, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.switching-checkbox {
+  display: inline-block;
+  width: 45px;
+  height: 22px;
+  background-color: #eee;
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+}
+/* line 43, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.switching-checkbox span {
+  height: 18px;
+  width: 18px;
+  background-color: #aaa;
+  display: inline-block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  z-index: 1;
+}
+/* line 56, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.switching-checkbox input[type=checkbox] {
+  opacity: 0;
+}
+/* line 60, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.switching-checkbox input[type=checkbox]:checked + span {
+  left: unset;
+  right: 0px;
+  background-color: #2c304d;
+}
+/* line 66, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.show-text {
+  vertical-align: top;
+}
+/* line 70, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.custom-select-container {
+  background-color: #fff;
+  width: 100%;
+}
+/* line 73, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.custom-select-container .toggle-option-list {
+  width: 100%;
+  display: block;
+  padding: 8px 10px;
+  border: 0;
+  background-color: #ebebee;
+  position: relative;
+}
+/* line 80, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.custom-select-container .toggle-option-list:after {
+  content: '';
+  border-top: 5px solid #000;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+/* line 91, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.custom-select-container .option-list-container {
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+/* line 94, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.custom-select-container .option-list-container .option-search {
+  width: 100%;
+  padding: 10px;
+}
+/* line 97, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.custom-select-container .option-list-container .option-search input {
+  padding: 8px 8px;
+}
+/* line 101, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.custom-select-container .option-list-container .option-list {
+  max-height: 400px;
+  overflow: auto;
+}
+/* line 104, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.custom-select-container .option-list-container .option-list li.option {
+  position: relative;
+  cursor: pointer;
+  padding: 8px 20px 8px 20px;
+  color: #000;
+  position: relative;
+}
+/* line 106, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.custom-select-container .option-list-container .option-list li.option input[type=checkbox] {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+/* line 111, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.custom-select-container .option-list-container .option-list li.option .text {
+  user-select: none;
+  -moz-user-select: none;
+}
+/* line 119, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.custom-select-container .option-list-container .option-list li.option.active {
+  background-color: #2c304d;
+  color: #fff;
+}
+/* line 122, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.custom-select-container .option-list-container .option-list li.option.active .tick {
+  display: inline-block;
+}
+/* line 126, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_config.scss */
+.custom-select-container .option-list-container .option-list li.option .tick {
+  position: absolute;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  top: 50%;
+  right: 10px;
+  width: 10px;
+  height: 15px;
+  transform: rotate(40deg) translate(-50%, -50%);
+  display: none;
+}
+/* line 1, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_override.scss */
+.mb-5 {
+  margin-bottom: 1rem !important;
+}
+/* line 5, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_override.scss */
+.page {
+  background-color: #f0f0f0;
+}
+/*background-color: #eee;*/
+/* line 1, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_components.scss */
+.msg-from-server.msg-top {
+  width: 95%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+}
+/* line 10, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_components.scss */
+.fancybox-content {
+  height: 600px !important;
+}
+/* line 14, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_components.scss */
+table {
+  color: #000;
+}
+/* line 1, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_header.scss */
+.quick-menu {
+  color: #000;
+  display: inline-block;
+  position: relative;
+  margin-left: 20px;
+}
+/* line 6, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_header.scss */
+.quick-menu > span {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid #2c304d;
+  transition: all 0.3s;
+}
+/* line 15, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_header.scss */
+.quick-menu > span:hover {
+  background-color: #2c304d;
+  color: #fff;
+}
+/* line 20, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_header.scss */
+/* line 21, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_header.scss */
+.quick-menu:hover > ul {
+  display: block;
+}
+/* line 28, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_header.scss */
+.quick-menu ul {
+  display: none;
+  position: absolute;
+  padding: 8px 0;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+}
+/* line 36, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_header.scss */
+.quick-menu ul:before, .quick-menu ul:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 10px;
+}
+/* line 43, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_header.scss */
+.quick-menu ul:before {
+  border-bottom: 4px solid #fff;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  z-index: 2;
+}
+/* line 49, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_header.scss */
+.quick-menu ul:after {
+  border-bottom: 5px solid #2c304d;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  z-index: 1;
+}
+/* line 55, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_header.scss */
+/* line 56, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_header.scss */
+.quick-menu ul li a {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+/* line 60, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_header.scss */
+.quick-menu ul li a:hover {
+  background-color: #2c304d;
+  color: #fff;
+}
+/* line 1, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_profile.scss */
+.avatar-action {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+}
+/* line 6, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_profile.scss */
+.avatar-action .btn {
+  display: inline-block;
+  margin: 8px 0;
+}
+/* line 9, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_profile.scss */
+.avatar-action .btn i {
+  font-size: 20px;
+}
+/* line 1, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_menu.scss */
+/* line 2, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_menu.scss */
+table#menu_list .badge1 {
+  color: #fff;
+  background-color: #17a2b8;
+}
+/* line 6, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_menu.scss */
+table#menu_list .badge2 {
+  color: #fff;
+  background-color: #dc3545;
+}
+/* line 10, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_menu.scss */
+table#menu_list .badge3 {
+  color: #fff;
+  background-color: #ffc107;
+}
+/* line 14, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_menu.scss */
+table#menu_list .badge4 {
+  color: #fff;
+  background-color: #28a745;
+}
+/* line 18, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_menu.scss */
+table#menu_list .badge5, table#menu_list .badge6, table#menu_list .badge7, table#menu_list .badge8, table#menu_list .badge9 {
+  color: #fff;
+  background-color: #007bff;
+  /* #dc3545 */
+}
+/* line 25, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_menu.scss */
+.submenu-sign {
+  color: #000;
+  font-size: 20px;
+}
+/* line 30, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_menu.scss */
+/* line 31, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_menu.scss */
+#add_menu_link_modal .result-list {
+  padding: 8px 0;
+  width: 100%;
+  border-radius: 3px;
+}
+/* line 36, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_menu.scss */
+#add_menu_link_modal .result-list li {
+  color: #000;
+  width: 100%;
+  padding: 8px;
+  position: relative;
+  cursor: pointer;
+}
+/* line 46, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_menu.scss */
+#add_menu_link_modal .result-list li:hover {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+/* line 53, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_menu.scss */
+/* line 54, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_menu.scss */
+#add_menu_link_modal .result-pagination button {
+  border: 0;
+  display: inline-block;
+  padding: 6px 10px;
+  background-color: #5d5386;
+  color: #fff;
+}
+/* line 1, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+/* line 2, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+/* line 3, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+/* line 4, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+/* line 5, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+.sidebar .one-widget.action-button .actions input {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+/* line 9, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+.sidebar .one-widget.action-button .actions input:last-child {
+  margin-bottom: 0;
+}
+/* line 22, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+#options_modal .mb-3 {
+  display: inline-block !important;
+  margin: 0 20px 0 0;
+}
+/* line 27, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+/* line 28, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+#options_modal .color_review {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 30px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  float: right;
+}
+/* line 39, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+.remove-option-item {
+  color: red;
+  font-weight: bold;
+}
+/* line 44, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+.add-more-option-item {
+  font-size: 30px;
+  cursor: pointer;
+}
+/* line 49, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+#product_list_datatable .product-image {
+  max-width: 80px;
+}
+/* gallery */
+/* line 54, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+.product-gallery-preview {
+  height: 100px;
+  overflow: auto;
+  width: 100%;
+  border: 2px dashed purple;
+}
+/* line 60, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+.product-gallery-preview .product-gallery-images {
+  max-width: 70px;
+  max-height: 70px;
+  margin: 4px;
+}
+/* SẢN PHẨM - PHIÊN BẢN */
+/* line 67, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+/* line 68, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+.version-list li {
+  display: block;
+}
+/* line 71, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+.version-list li a {
+  display: block;
+  padding: 15px;
+}
+/* line 78, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+.version-list.active {
+  background-color: #2c304d;
+}
+/* line 81, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+.version-list.active a {
+  color: #fff;
+}
+/* line 87, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+.add-more-version-button {
+  font-size: 30px;
+  vertical-align: middle;
+  display: none;
+}
+/* line 95, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+.is-paid-button {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+/* line 101, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+/* line 102, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+.cates-widget .submenu {
+  margin-left: 20px;
+}
+/* line 106, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+.cates-widget input[type=checkbox] {
+  cursor: pointer;
+}
+/* line 111, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+/* line 112, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+/* line 113, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+/* line 114, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_product.scss */
+.product-version-list-container li.active a {
+  color: #fff;
+  background-color: #2c304d;
+}
+/* line 1, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_colorpage.scss */
+.color-review {
+  height: 30px;
+}
+/* line 5, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_colorpage.scss */
+.review-color-block {
+  padding: 8px;
+  display: block;
+  margin: 0 auto;
+  width: 70px;
+  text-align: center;
+}
+/* line 14, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_colorpage.scss */
+/* line 15, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_colorpage.scss */
+/* line 16, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_colorpage.scss */
+#color_list_datatable .hex-review input {
+  vertical-align: middle;
+}
+/* line 1, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_slideshowpage.scss */
+.one-slide {
+  margin-bottom: 20px;
+  position: relative;
+}
+/* line 4, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_slideshowpage.scss */
+.one-slide .remove-slide-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: red;
+  font-weight: bold;
+  border-radius: 0 5px 0 0;
+  cursor: pointer;
+  background-color: #2c304d;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 17, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_slideshowpage.scss */
+.one-slide .image-box {
+  height: 200px;
+  border: 1px dashed #2c304d;
+  border-radius: 5px;
+  overflow: hidden;
+}
+/* line 22, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_slideshowpage.scss */
+.one-slide .image-box img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+/* line 1, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_seo-zone.scss */
+/* line 2, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_seo-zone.scss */
+.seo-zone p {
+  margin: 0;
+}
+/* line 5, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_seo-zone.scss */
+.seo-zone .page-title-seo {
+  color: #1a0dab;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* line 10, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_seo-zone.scss */
+.seo-zone .page-url-seo {
+  color: #006621;
+}
+/* line 13, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_seo-zone.scss */
+.seo-zone .page-seo-slug {
+  border: 0;
+  background-color: transparent;
+  color: #006621;
+}
+/* line 18, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_seo-zone.scss */
+.seo-zone .page-description-seo {
+  color: #545454;
+}
+/* line 1, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_order.scss */
+.customer-info {
+  color: #000;
+}
+/* line 5, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_order.scss */
+/* line 6, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_order.scss */
+.order-detail-table .shipping-fee, .order-detail-table .total {
+  font-weight: bold;
+  font-size: 17px;
+}
+/* line 2, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.customer-messages-table-container {
+  padding: 10px 0;
+}
+/* line 6, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+/* line 7, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.customer-messages-table tr.message-row {
+  cursor: pointer;
+  background-color: #f4f7f7;
+  position: relative;
+}
+/* line 11, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.customer-messages-table tr.message-row:hover {
+  box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+  z-index: 1;
+}
+/* line 15, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+/* line 16, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.customer-messages-table tr.message-row td:first-child .reply-status {
+  color: #aaa;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+}
+/* line 29, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.customer-messages-table tr.message-row td:nth-child(n+2) {
+  color: #aaa;
+}
+/* line 33, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.customer-messages-table tr.message-row.unread {
+  background-color: #fff;
+}
+/* line 35, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.customer-messages-table tr.message-row.unread td:nth-child(n+2) {
+  font-weight: bold;
+  color: #000;
+}
+/* line 40, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+/* line 41, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+/* line 42, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.customer-messages-table tr.message-row.unreply td:first-child .reply-status {
+  color: #fff;
+  background-color: #000;
+}
+/* line 51, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.action-dropdown-container {
+  position: relative;
+}
+/* line 53, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.action-dropdown-container .action-dropdown-button {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 63, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.action-dropdown-container .action-dropdown-button:hover, .action-dropdown-container .action-dropdown-button.active {
+  background-color: #b8c2c7;
+  border: 1px solid #9baab1;
+}
+/* line 69, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.action-dropdown-container .action-dropdown {
+  width: 220px;
+  padding: 4px 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: none;
+  z-index: 1;
+}
+/* line 80, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.action-dropdown-container .action-dropdown .action-dropdown-item {
+  cursor: pointer;
+  padding: 4px 20px 4px 20px;
+  border-bottom: 1px solid #f1f3f4;
+  color: #333;
+}
+/* line 85, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.action-dropdown-container .action-dropdown .action-dropdown-item:last-child {
+  border-bottom: 0;
+}
+/* line 88, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.action-dropdown-container .action-dropdown .action-dropdown-item:hover {
+  background-color: #f1f3f4;
+}
+/* line 95, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.table-header-container {
+  display: flex;
+  align-items: center;
+}
+/* line 99, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.table-header-container .customer-message-pagination {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+/* line 106, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.table-header-container .customer-message-pagination .pagination-direction {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 114, C:/xampp/htdocs/website/public/backend/assets/sass/includes/_customer_message_page.scss */
+.table-header-container .customer-message-pagination .pagination-direction:hover, .table-header-container .customer-message-pagination .pagination-direction.active {
+  background-color: #b8c2c7;
+  border: 1px solid #9baab1;
+}

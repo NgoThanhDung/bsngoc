@@ -1,1 +1,1 @@
-# bsngoc
+# clinic

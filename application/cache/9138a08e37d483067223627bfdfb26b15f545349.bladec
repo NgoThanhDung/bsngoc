@@ -1,0 +1,22 @@
+<div class="user-email-page">
+ <div class="">
+ <div class="change-email-form-container auth-form-container">
+ <div class="body">
+ <?php echo form_open(base_url('email/cap-nhat'), ['class'=>'change-email-form']); ?>
+
+ <div class="auth-control">
+ <input type="email" name="email" required placeholder="Email mới"value="<?= $user['email'] ?>" />
+ </div>
+ <div class="auth-control">
+ <input type="password" name="password" required placeholder="Mật khẩu xác nhận"/>
+ </div>
+ <div class="auth-control text-left">
+ <button class="dark-button button" type="submit">Cập nhật email</button>
+ </div>
+ <?php echo form_close(); ?>
+
+ </div>
+ <div class="footer"></div>
+ </div>
+ </div>
+</div>

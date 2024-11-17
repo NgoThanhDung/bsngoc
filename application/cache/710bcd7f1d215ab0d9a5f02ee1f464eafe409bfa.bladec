@@ -1,0 +1,36 @@
+<div class="user-profile-page">
+ <div class="">
+ <div class="update-user-profile-form-container auth-form-container">
+ <div class="body">
+ <?php echo form_open(base_url('thong-tin-ca-nhan/cap-nhat'), ['class'=>'update-profile-form']); ?>
+
+ <div class="auth-control">
+ <input type="text" name="lastname" required="required" placeholder="Họ tên đệm" value="<?php echo static::e($user['lastname']); ?>"/>
+ </div>
+ <div class="auth-control">
+ <input type="text" name="firstname" required="required" placeholder="Tên" value="<?php echo static::e($user['firstname']); ?>" />
+ </div>
+ <div class="auth-control radio-group-control">
+ <label class="one-radio">Nam
+ <input type="radio" value="male" name="sex" <?php echo static::e($user['sex'] == 'male' ? 'checked' : NULL); ?> />
+ </label>
+ <label>Nữ
+ <input type="radio" value="female" name="sex" <?php echo static::e($user['sex'] == 'female' ? 'checked' : NULL); ?>/>
+ </label>
+ </div>
+ <div class="auth-control">
+ <input type="text" name="mobile_no" required="required" placeholder="Điện thoại" value="<?php echo static::e($user['mobile_no']); ?>" pattern="[0][1-9][0-9]{7,9}"/>
+ </div>
+ <div class="auth-control">
+ <input type="text" name="address" required="required" placeholder="Địa chỉ" value="<?php echo static::e($user['address']); ?>" />
+ </div>
+ <div class="auth-control text-left">
+ <button class="dark-button button" type="submit">Cập nhật</button>
+ </div>
+ <?php echo form_close(); ?>
+
+ </div>
+ <div class="footer"></div>
+ </div>
+ </div>
+</div>

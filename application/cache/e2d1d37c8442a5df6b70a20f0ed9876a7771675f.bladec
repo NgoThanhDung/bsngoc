@@ -1,0 +1,46 @@
+<div class="user-order-history-page">
+ <div class="row">
+
+ <?php $__currentLoopData = $orders; $this->addLoop($__currentLoopData); foreach($__currentLoopData as $order): $this->incrementLoopIndices(); $loop = $this->getFirstLoop(); ?>
+ <?php 
+ $paid     = $order['is_paid'] ? 'paid'                       : NULL;
+ $paid_msg = $order['is_paid'] ? 'Đã nhận hàng và thanh toán' : 'Chưa nhận hàng và chưa thanh toán';
+ ?>
+ <div class="col-12 col-lg-6">
+ <div class="order-item-container <?php echo static::e($paid); ?>">
+ <span class="paid" title="<?php echo static::e($paid_msg); ?>">
+ <?php if($order['is_paid']): ?>
+ <i class="fas fa-check"></i>
+ <?php else: ?>
+ <i class="fas fa-spinner fa-spin"></i>
+ <?php endif; ?>
+ </span>
+ <ul>
+ <li class="receiver">
+ <label>Gửi tới:</label>
+ <span><?php echo static::e($order['name']); ?></span>
+ </li>
+ <li class="created_at">
+ <label>Ngày gửi:</label>
+ <span><?php echo static::e(date('d/m/Y H:i:s', strtotime($order['created_at']))); ?></span>
+ </li>
+ <li class="phone">
+ <label>SĐT:</label>
+ <span><?php echo static::e($order['phone']); ?></span>
+ </li>
+ <li class="total">
+ <label>Tổng:</label>
+ <span><?php echo static::e(format_money($order['total'])); ?></span>
+ </li>
+ <li class="view text-right">
+ <a href="<?php echo static::e(base_url('don-hang/').$order['id']); ?>">
+ Xem chi tiết
+ </a>
+ </li>
+ </ul>
+ </div>
+ </div>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+
+ </div>
+</div>

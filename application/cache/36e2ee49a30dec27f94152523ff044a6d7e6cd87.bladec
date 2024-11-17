@@ -1,0 +1,7 @@
+<option value="0" selected>Chọn quận / huyện</option>
+<?php $__currentLoopData = $districts; $this->addLoop($__currentLoopData); foreach($__currentLoopData as $district): $this->incrementLoopIndices(); $loop = $this->getFirstLoop(); ?>
+ <option value="<?php echo static::e($district['id']); ?>">
+ <?php echo static::e($district['name']); ?>
+
+ </option>
+<?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>

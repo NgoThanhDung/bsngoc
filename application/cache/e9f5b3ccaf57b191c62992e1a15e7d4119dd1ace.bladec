@@ -1,0 +1,18 @@
+<?php 
+ if (empty($shipping_fee)) {
+ $shipping_fee = 0;
+ }
+ $total = $_CI->cart->total();
+ ?>
+<li>
+ <span>Tạm tính</span>
+ <span class="subtotal"><?php echo static::e(format_money($total)); ?> </span>
+</li>
+<li>
+ <span>Phí vận chuyển</span>
+ <span class="subtotal"><?php echo static::e(format_money($shipping_fee)); ?></span>
+</li>
+<li>
+ <span>Tổng cộng</span>
+ <span class="subtotal"><?php echo static::e(format_money($total + $shipping_fee)); ?></span>
+</li>

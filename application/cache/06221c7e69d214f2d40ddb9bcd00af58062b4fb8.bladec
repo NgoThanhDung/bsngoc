@@ -1,0 +1,16 @@
+<?php 
+$link = generate_article_link($article['alias'], $article['id'])
+ ?>
+<div class="article-column-container">
+ <div class="article-image">
+ <a class="product-image hover-animation" href="<?php echo static::e($link); ?>">
+ <img src="<?php echo static::e(base_url($article['thumbnail'])); ?>" alt=""/>
+ </a>
+ </div>
+ <div class="article-info">
+ <p class="article-title">
+ <a href="<?php echo static::e($link); ?>"><?php echo static::e($article['name']); ?></a>
+ </p>
+ <p class="article-description"><?php echo static::e(word_limiter($article['caption'], 20)); ?></p>
+ </div>
+</div>

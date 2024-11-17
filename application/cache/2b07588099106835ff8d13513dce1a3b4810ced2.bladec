@@ -1,0 +1,169 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('main_views'); ?>
+<article class="entry">
+ <div class="entry-content">
+ <!-- Hero-->
+ <div class="quater-percent-bg-cream pt-5 pt-lg-8">
+ <div class="container">
+ <div class="row gx-0">
+ <div class="col-lg-6">
+ <div class="pr-lg-5">
+ <div class="has-soft-orange-color mb-2 mb-lg-2">
+ <h1>We are team of different talented for one purpose.</h1>
+ </div>
+ <div class="paragraph pr-lg-2">
+ <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+ </div>
+ <div class="container">
+ <div class="mt-lg-6 mt-5">
+ <div class="col-lg-8 offset-lg-4">
+ <div class="border-drop-left border-color-soft-blue"><img src="<?php echo base_url() ?>public/frontend/assets/images/33.jpg" alt="Meeting"></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-6 mt-6 mt-lg-0">
+ <div class="border-drop-left border-color-soft-blue"><img src="<?php echo base_url() ?>public/frontend/assets/images/32.jpg" alt="Meeting"></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!--members card-->
+ <div class="mt-5 mt-lg-8">
+ <div class="container">
+ <div class="row gx-5">
+ <div class="col-lg-4 mt-5">
+ <div class="member-content">
+ <div class="member-image"><img src="<?php echo base_url() ?>public/frontend/assets/images/34.jpg"></div>
+ <div class="border border-soft-creame border-top-0">
+ <div class="member-text">
+ <h5 class="member-name">Reda McClain</h5>
+ <div class="member-tag"><span class="member-role">founder and chairman</span></div>
+ <p>Quisque sollicitudin lacinia sapien, eu tincidunt nunc accumsan laoreet. Curabitur feugiat posuere odio nec tincidunt.</p>
+ <ul class="list-unstyled list-inlinetrue mb-7 mb-md-0">
+ <li class="list-inline-item border border-black-color py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-facebook-f"></i></a></li>
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-instagram"></i></a></li>
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-twitter"></i></a></li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-4 mt-5">
+ <div class="member-content">
+ <div class="member-image"><img src="<?php echo base_url() ?>public/frontend/assets/images/35.jpg"></div>
+ <div class="border border-soft-creame border-top-0">
+ <div class="member-text">
+ <h5 class="member-name">Reda McClain</h5>
+ <div class="member-tag"><span class="member-role">founder and chairman</span></div>
+ <p>Quisque sollicitudin lacinia sapien, eu tincidunt nunc accumsan laoreet. Curabitur feugiat posuere odio nec tincidunt.</p>
+ <ul class="list-unstyled list-inlinetrue mb-7 mb-md-0">
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-facebook-f"></i></a></li>
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-instagram"></i></a></li>
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-twitter"></i></a></li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-4 mt-5">
+ <div class="member-content">
+ <div class="member-image"><img src="<?php echo base_url() ?>public/frontend/assets/images/36.jpg"></div>
+ <div class="border border-soft-creame border-top-0">
+ <div class="member-text">
+ <h5 class="member-name">Reda McClain</h5>
+ <div class="member-tag"><span class="member-role">founder and chairman</span></div>
+ <p>Quisque sollicitudin lacinia sapien, eu tincidunt nunc accumsan laoreet. Curabitur feugiat posuere odio nec tincidunt.</p>
+ <ul class="list-unstyled list-inlinetrue mb-7 mb-md-0">
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-facebook-f"></i></a></li>
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-instagram"></i></a></li>
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-twitter"> </i></a></li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="container">
+ <div class="row gx-5">
+ <div class="col-lg-4 mt-5">
+ <div class="member-content">
+ <div class="member-image"><img src="<?php echo base_url() ?>public/frontend/assets/images/37.jpg"></div>
+ <div class="border border-soft-creame border-top-0">
+ <div class="member-text">
+ <h5 class="member-name">Reda McClain</h5>
+ <div class="member-tag"><span class="member-role">founder and chairman</span></div>
+ <p>Quisque sollicitudin lacinia sapien, eu tincidunt nunc accumsan laoreet. Curabitur feugiat posuere odio nec tincidunt.</p>
+ <ul class="list-unstyled list-inlinetrue mb-7 mb-md-0">
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-facebook-f"></i></a></li>
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-instagram"></i></a></li>
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-twitter"></i></a></li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-4 mt-5">
+ <div class="member-content">
+ <div class="member-image"><img src="<?php echo base_url() ?>public/frontend/assets/images/38.jpg"></div>
+ <div class="border border-soft-creame border-top-0">
+ <div class="member-text">
+ <h5 class="member-name">Reda McClain</h5>
+ <div class="member-tag"><span class="member-role">founder and chairman</span></div>
+ <p>Quisque sollicitudin lacinia sapien, eu tincidunt nunc accumsan laoreet. Curabitur feugiat posuere odio nec tincidunt.</p>
+ <ul class="list-unstyled list-inline mb-7 mb-md-0">
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-facebook-f"></i></a></li>
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-instagram"></i></a></li>
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-twitter"></i></a></li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-4 mt-5">
+ <div class="member-content">
+ <div class="member-image"><img src="<?php echo base_url() ?>public/frontend/assets/images/39.jpg"></div>
+ <div class="border border-soft-creame border-top-0">
+ <div class="member-text">
+ <h5 class="member-name">Reda McClain</h5>
+ <div class="member-tag"><span class="member-role">founder and chairman</span></div>
+ <p>Quisque sollicitudin lacinia sapien, eu tincidunt nunc accumsan laoreet. Curabitur feugiat posuere odio nec tincidunt.</p>
+ <ul class="list-unstyled list-inlinetrue mb-7 mb-md-0">
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-facebook-f"></i></a></li>
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-instagram"></i></a></li>
+ <li class="list-inline-item border py-2 px-3"><a class="text-gray-350" href="#"><i class="fab fa-twitter"></i></a></li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- form subscription  -->
+ <?php echo $form_submit ?>
+ </div>
+ </div>
+</article>
+ <!-- jquery-->
+ <script src="<?= frontend('assets/js/jquery.min.js')?>"></script>
+ <!-- lozad js-->
+ <script src="<?= frontend('assets/js/lozad.min.js')?>"></script>
+ <!-- Bootstrap js-->
+ <script src="<?= frontend('assets/js/bootstrap.bundle.min.js')?>"></script>
+ <!-- Aos js-->
+ <script src="<?= frontend('assets/js/aos.js')?>"></script>
+ <!-- Slick flickity js-->
+ <script src="<?= frontend('assets/js/flickity.pkgd.min.js')?>"></script>
+ <!-- Magnific popup js-->
+ <script src="<?= frontend('assets/js/jquery.magnific-popup.min.js')?>"></script>
+ <!-- Countdown js-->
+ <script src="<?= frontend('assets/js/jquery.countdown.js')?>"></script>
+ <!-- CountTo js-->
+ <script src="<?= frontend('assets/js/jquery.countTo.js')?>"></script>
+ <!-- Global - Main js-->
+ <script src="<?= frontend('assets/js/global.js')?>"></script>
+<?php $this->stopSection(); ?>
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

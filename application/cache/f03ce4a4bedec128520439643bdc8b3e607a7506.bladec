@@ -1,0 +1,167 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('main_views'); ?>
+<article class="entry">
+ <div class="entry-content">
+ <!-- Hero-->
+ <div class="home-hero pt-5 pt-lg-8 pb-lg-9">
+ <!-- our services-->
+ <div class="container">
+ <div class="row gx-5 align-items-center">
+ <div class="col-lg-4">
+ <h5 class="has-soft-orange-color font-italic mb-2">Our services</h5>
+ <h2>We do simple, useful and beautiful solutions.</h2>
+ </div>
+ </div>
+ <div class="row gx-5 mt-6 mt-lg-7">
+ <div class="col-lg-4 mb-5 mb-lg-6">
+ <div><span class="icon"><i class="has-sun-shade-color h-large display-6 fas fa-bullhorn mb-lg-4 mb-4"></i></span>
+ <h4 class="text-capitalize mb-4">Marketing</h4>
+ <p>Praesent varius lorem mauris, varius interdum nisi consequat et. Aliquam vel mi a diam vestibulum ultrices eu vitae lectus. Morbi venenatis lacinia cursus. Nullam at purus tincidunt cursus. </p>
+ </div>
+ </div>
+ <div class="col-lg-4 mb-5 mb-lg-6">
+ <div> <span class="icon"><i class="has-soft-orange-color h-large display-6 fas fa-desktop mb-lg-4 mb-4"></i></span>
+ <h4 class="text-capitalize mb-4">Web design</h4>
+ <p>Praesent varius lorem mauris, varius interdum nisi consequat et. Aliquam vel mi a diam vestibulum ultrices eu vitae lectus. Morbi venenatis lacinia cursus. Nullam at purus tincidunt cursus. </p>
+ </div>
+ </div>
+ <div class="col-lg-4 mb-5 mb-lg-6">
+ <div> <span class="icon"><i class="has-sky-blue-color h-large display-6 fas fa-ring mb-lg-4 mb-4"></i></span>
+ <h4 class="text-capitalize mb-4">Branding</h4>
+ <p>Praesent varius lorem mauris, varius interdum nisi consequat et. Aliquam vel mi a diam vestibulum ultrices eu vitae lectus. Morbi venenatis lacinia cursus. Nullam at purus tincidunt cursus.</p>
+ </div>
+ </div>
+ </div>
+ <div class="row gx-5">
+ <div class="col-lg-4 mb-5 mb-lg-6">
+ <div><span class="icon"><i class="has-soft-orange-color h-large display-6 fas fa-palette mb-lg-4 mb-4"></i></span>
+ <h4 class="text-capitalize mb-4">Design</h4>
+ <p>Praesent varius lorem mauris, varius interdum nisi consequat et. Aliquam vel mi a diam vestibulum ultrices eu vitae lectus. Morbi venenatis lacinia cursus. Nullam at purus tincidunt cursus. </p>
+ </div>
+ </div>
+ <div class="col-lg-4 mb-5 mb-lg-6">
+ <div><span class="icon"><i class="has-sun-shade-color h-large display-6 fas fa-cogs mb-lg-4 mb-4"></i></span>
+ <h4 class="text-capitalize mb-4">Web development</h4>
+ <p>Praesent varius lorem mauris, varius interdum nisi consequat et. Aliquam vel mi a diam vestibulum ultrices eu vitae lectus. Morbi venenatis lacinia cursus. Nullam at purus tincidunt cursus. </p>
+ </div>
+ </div>
+ <div class="col-lg-4 mb-5 mb-lg-6">
+ <div><span class="icon"><i class="h-large display-6 fas fa-puzzle-piece mb-lg-4 mb-4"></i></span>
+ <h4 class="text-capitalize mb-4">Concept development</h4>
+ <p>Praesent varius lorem mauris, varius interdum nisi consequat et. Aliquam vel mi a diam vestibulum ultrices eu vitae lectus. Morbi venenatis lacinia cursus. Nullam at purus tincidunt cursus. </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- brands -->
+ <div class="container mt-lg-8 mt-6">
+ <div class="row align-items-stretch gx-0">
+ <div class="col-lg-6 services-1-bg-img py-10 order-lg-1"></div>
+ <div class="col-lg-6 border border-lg-right-0 border-soft-creame">
+ <div class="px-lg-6 py-lg-7 px-4 py-5">
+ <div class="mb-lg-4 mb-3">
+ <h4 class="has-soft-orange-color">Building Brands</h4>
+ </div>
+ <div class="mt-lg-2 mb-lg-3">
+ <p>siam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. dolores et ea rebum vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+ </div>
+ <div class="mt-lg-4 mt-5"><a class="btn btn-default rounded-0" href="page-service.html">Read More</a></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!--  Designing Products-->
+ <div class="container mt-lg-7 mt-6">
+ <div class="row align-items-strecth gx-0">
+ <div class="col-lg-6 services-2-bg-img py-10"> </div>
+ <div class="col-lg-6 border border-lg-left-0 border-soft-creame">
+ <div class="px-lg-6 py-lg-7 px-4 py-5">
+ <div class="mb-lg-4 mb-3">
+ <h4 class="has-soft-orange-color">Designing Products</h4>
+ </div>
+ <div class="mt-lg-2 mb-lg-3">
+ <p>siam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. dolores et ea rebum vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+ </div>
+ <div class="mt-lg-4 mt-5"><a class="btn btn-default rounded-0" href="page-service.html">Read More</a></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- Improving interfaces-->
+ <div class="container mt-lg-7 mt-6">
+ <div class="row align-items-stretch gx-0">
+ <div class="col-lg-6 services-3-bg-img py-10 order-lg-1"></div>
+ <div class="col-lg-6 border border-lg-right-0 border-soft-creame">
+ <div class="px-lg-6 py-lg-7 px-4 py-5">
+ <div class="mb-lg-4 mb-3">
+ <h4 class="has-soft-orange-color">Improving Interfaces</h4>
+ </div>
+ <div class="mt-lg-2 mb-lg-3">
+ <p>siam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. dolores et ea rebum vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+ </div>
+ <div class="mt-lg-4 mt-5"><a class="btn btn-default rounded-0" href="page-service.html">Read More</a></div>
+ </div>
+ </div>
+ </div>
+ <!--values-->
+ <div class="container mt-lg-9 mt-8 px-0">
+ <div class="row gx-5 align-items-center">
+ <div class="col-lg-6">
+ <div class="border-drop-right"><img src="<?php echo base_url()?>public/frontend/assets/images/2.jpg" alt="Meeting"></div>
+ </div>
+ <div class="col-lg-6">
+ <div class="mt-lg-5 mt-5">
+ <h2 class="font-weight-bold mb-lg-3 mb-3">Our Values</h2>
+ <div class="mt-lg-1 mt-1">
+ <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit, consetetur sadipscing elitr.</p>
+ </div>
+ </div>
+ <div class="mt-5">
+ <h5 class="mb-lg-3 mb-3">Collaborative</h5>
+ <div class="mt-lg-1 mt-1">
+ <p>Consetetur Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Accusamjusto Duo Et.</p>
+ </div>
+ </div>
+ <div class="mt-5">
+ <h5 class="mb-lg-3 mb-3">Trusted</h5>
+ <div class="mt-lg-1 mt-1">
+ <p>Consetetur Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Accusamjusto Duo Et.</p>
+ </div>
+ </div>
+ <div class="mt-5">
+ <h5 class="mb-lg-3 mb-3">Focused</h5>
+ <div class="mt-lg-1 mt-1">
+ <p>Consetetur Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Accusamjusto Duo Et.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- form subscription  -->
+ <?php echo $form_submit ?>
+ <!----end form ----------->
+ </div>
+</article>
+ <!-- jquery-->
+ <script src="<?= frontend('assets/js/jquery.min.js')?>"></script>
+ <!-- lozad js-->
+ <script src="<?= frontend('assets/js/lozad.min.js')?>"></script>
+ <!-- Bootstrap js-->
+ <script src="<?= frontend('assets/js/bootstrap.bundle.min.js')?>"></script>
+ <!-- Aos js-->
+ <script src="<?= frontend('assets/js/aos.js')?>"></script>
+ <!-- Slick flickity js-->
+ <script src="<?= frontend('assets/js/flickity.pkgd.min.js')?>"></script>
+ <!-- Magnific popup js-->
+ <script src="<?= frontend('assets/js/jquery.magnific-popup.min.js')?>"></script>
+ <!-- Countdown js-->
+ <script src="<?= frontend('assets/js/jquery.countdown.js')?>"></script>
+ <!-- CountTo js-->
+ <script src="<?= frontend('assets/js/jquery.countTo.js')?>"></script>
+ <!-- Global - Main js-->
+ <script src="<?= frontend('assets/js/global.js')?>"></script>
+<?php $this->stopSection(); ?>
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

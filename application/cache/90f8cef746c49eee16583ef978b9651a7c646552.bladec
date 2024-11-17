@@ -1,0 +1,41 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('main_views'); ?>
+
+
+ <section class="section-paddingY product-collection has-loader">
+
+ <div class="section-loader">
+ <i class="fas fa-spinner fa-5x fa-pulse"></i>
+ </div>
+
+
+ <div class="container">
+ <div class="section-header">
+ <p class="section-title"><?php echo static::e($category['name']); ?></p>
+ <input type="hidden" name="cate_id" value="<?php echo static::e($category['id']); ?>">
+ </div>
+ <?php if($collection): ?>
+ <div class="section-body">
+ <div class="row">
+ <?php $__currentLoopData = $collection; $this->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $this->incrementLoopIndices(); $loop = $this->getFirstLoop(); ?>
+ <div class="col-6 col-sm-6 col-lg-4 col-xl-3">
+ <?php echo $this->runChild('frontend.components._product_column', ['product' => $product]); ?>
+ </div>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </div>
+ </div>
+ <div class="section-bottom has-pagination">
+ <div class="website-pagination">
+ <?php echo $pagination; ?>
+
+ </div>
+ </div>
+ <?php else: ?>
+ <h4 class="text-center">Danh mục này chưa có sản phẩm nào</h4>
+ <?php endif; ?>
+ </div>
+ </section>
+<?php $this->stopSection(); ?>
+
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

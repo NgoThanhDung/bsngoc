@@ -1,0 +1,110 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('main_views'); ?>
+<article class="entry">
+ <div class="entry-content">
+ <!-- Hero-->
+ <div class="home-hero pt-5 pb-8 pt-lg-8 pb-lg-2">
+ <div class="container">
+ <div class="row">
+ <div class="col-lg-5">
+ <div class="pr-lg-1">
+ <div class="mb-2 mb-lg-2">
+ <h2>Certified Partners​</h2>
+ </div>
+ <div class="pr-lg-3">
+ <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="container my-lg-7 mt-6">
+ <div class="row gx-5 gy-5">
+ <div class="col-lg-4 align-items-center mb-lg-6">
+ <div class="border border-dark">
+ <div class="px-lg-4 py-lg-6 px-4 py-6">
+ <div><span class="icon"><i class="has-soft-orange-color h-large display-6 fas fa-bullhorn mb-lg-4 mb-4"></i></span>
+ <h4 class="text-capitalize mb-4">Marketing</h4>
+ <p>Praesent varius lorem mauris, varius interdum nisi consequat et. Aliquam vel mi a diam vestibulum ultrices eu vitae lectus. Morbi venenatis lacinia cursus. Nullam at purus tincidunt cursus. </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-4">
+ <div class="border border-dark">
+ <div class="px-lg-4 py-lg-6 px-4 py-6">
+ <div><span class="icon"><i class="has-soft-orange-color h-large display-6 fas fa-desktop mb-lg-4 mb-4"></i></span>
+ <h4 class="text-capitalize mb-4">Web Design</h4>
+ <p>Praesent varius lorem mauris, varius interdum nisi consequat et. Aliquam vel mi a diam vestibulum ultrices eu vitae lectus. Morbi venenatis lacinia cursus. Nullam at purus tincidunt cursus. </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-4 mb-5">
+ <div class="border border-dark">
+ <div class="px-lg-4 py-lg-6 px-4 py-6">
+ <div><span class="icon"><i class="has-soft-orange-color h-large display-6 fas fa-ring mb-lg-4 mb-4"></i></span>
+ <h4 class="text-capitalize mb-4">Branding</h4>
+ <p>Praesent varius lorem mauris, varius interdum nisi consequat et. Aliquam vel mi a diam vestibulum ultrices eu vitae lectus. Morbi venenatis lacinia cursus. Nullam at purus tincidunt cursus. </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="row gx-5">
+ <div class="col-lg-4 align-items-center mb-5">
+ <div class="border border-dark">
+ <div class="px-lg-4 py-lg-6 px-4 py-6">
+ <div><span class="icon"><i class="has-soft-orange-color h-large display-6 fas fa-palette mb-lg-4 mb-4"></i></span>
+ <h4 class="text-capitalize mb-4">Design</h4>
+ <p>Praesent varius lorem mauris, varius interdum nisi consequat et. Aliquam vel mi a diam vestibulum ultrices eu vitae lectus. Morbi venenatis lacinia cursus. Nullam at purus tincidunt cursus. </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-4 mb-5">
+ <div class="border border-dark">
+ <div class="px-lg-4 py-lg-6 px-4 py-6">
+ <div><span class="icon"><i class="has-soft-orange-color h-large display-6 fas fa-cogs mb-lg-4 mb-4"></i></span>
+ <h4 class="text-capitalize mb-4">Web development</h4>
+ <p>Praesent varius lorem mauris, varius interdum nisi consequat et. Aliquam vel mi a diam vestibulum ultrices eu vitae lectus. Morbi venenatis lacinia cursus. Nullam at purus tincidunt cursus. </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-4">
+ <div class="border border-dark">
+ <div class="px-lg-4 py-lg-6 px-4 py-6">
+ <div><span class="icon"><i class="has-soft-orange-color h-large display-6 fas fa-puzzle-piece mb-lg-4 mb-4"></i></span>
+ <h4 class="text-capitalize mb-4">Concept development</h4>
+ <p>Praesent varius lorem mauris, varius interdum nisi consequat et. Aliquam vel mi a diam vestibulum ultrices eu vitae lectus. Morbi venenatis lacinia cursus. Nullam at purus tincidunt cursus. </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+</article>
+ <!-- jquery-->
+ <script src="<?= frontend('assets/js/jquery.min.js')?>"></script>
+ <!-- lozad js-->
+ <script src="<?= frontend('assets/js/lozad.min.js')?>"></script>
+ <!-- Bootstrap js-->
+ <script src="<?= frontend('assets/js/bootstrap.bundle.min.js')?>"></script>
+ <!-- Aos js-->
+ <script src="<?= frontend('assets/js/aos.js')?>"></script>
+ <!-- Slick flickity js-->
+ <script src="<?= frontend('assets/js/flickity.pkgd.min.js')?>"></script>
+ <!-- Magnific popup js-->
+ <script src="<?= frontend('assets/js/jquery.magnific-popup.min.js')?>"></script>
+ <!-- Countdown js-->
+ <script src="<?= frontend('assets/js/jquery.countdown.js')?>"></script>
+ <!-- CountTo js-->
+ <script src="<?= frontend('assets/js/jquery.countTo.js')?>"></script>
+ <!-- Global - Main js-->
+ <script src="<?= frontend('assets/js/global.js')?>"></script>
+<?php $this->stopSection(); ?>
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

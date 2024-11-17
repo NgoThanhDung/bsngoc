@@ -1,0 +1,78 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('main_views'); ?>
+<article class="entry">
+ <div class="entry-content">
+ <!-- Hero-->
+ <div class="home-hero py-5 pt-lg-8 pb-lg-8">
+ <div class="container">
+ <div class="row">
+ <div class="col-lg-5">
+ <div class="pr-lg-1">
+ <div class="mb-2 mb-lg-2 has-soft-orange-color">
+ <h2>Call To Action</h2>
+ </div>
+ <div class="pr-lg-3">
+ <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="mt-lg-9 mb-lg-8 mt-7 mb-6">
+ <div class="container">
+ <div class="home-hero py-lg-7 px-lg-7 py-5 px-5">
+ <div class="row gx-5">
+ <div class="col-lg-6">
+ <h2>Let’s work & build something great together.</h2>
+ <div class="mt-lg-4 mt-4"><a class="btn btn-default rounded-0" href="<?php echo base_url() ?>lien-he">Contact Us</a></div>
+ </div>
+ <div class="col-lg-6">
+ <div class="paragraph font-weight-light mt-5 mt-lg-0">
+ <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua sed diam nonumy.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="mb-lg-9 mb-7">
+ <div class="container border border-black">
+ <div class="py-lg-7 py-5 px-4">
+ <div class="row">
+ <div class="col-lg-8 offset-lg-2 text-center">
+ <div class="mt-lg-3 mt-3">
+ <h2>Let’s build something great together.</h2>
+ </div>
+ <div class="mt-lg-3 mt-3">
+ <p>Dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et aliquyam erat, sed diam voluptua sed diam nonumy.</p>
+ </div>
+ <div class="mt-lg-4 mt-4"><a class="btn btn-default rounded-0" href="<?php echo base_url() ?>lien-he">Contact Us </a></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+</article>
+ <!-- jquery-->
+ <script src="<?= frontend('assets/js/jquery.min.js')?>"></script>
+ <!-- lozad js-->
+ <script src="<?= frontend('assets/js/lozad.min.js')?>"></script>
+ <!-- Bootstrap js-->
+ <script src="<?= frontend('assets/js/bootstrap.bundle.min.js')?>"></script>
+ <!-- Aos js-->
+ <script src="<?= frontend('assets/js/aos.js')?>"></script>
+ <!-- Slick flickity js-->
+ <script src="<?= frontend('assets/js/flickity.pkgd.min.js')?>"></script>
+ <!-- Magnific popup js-->
+ <script src="<?= frontend('assets/js/jquery.magnific-popup.min.js')?>"></script>
+ <!-- Countdown js-->
+ <script src="<?= frontend('assets/js/jquery.countdown.js')?>"></script>
+ <!-- CountTo js-->
+ <script src="<?= frontend('assets/js/jquery.countTo.js')?>"></script>
+ <!-- Global - Main js-->
+ <script src="<?= frontend('assets/js/global.js')?>"></script>
+<?php $this->stopSection(); ?>
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

@@ -1,0 +1,13 @@
+.avatar-action {
+  width: 100%; height: 100%;
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+  .btn {
+    display: inline-block;
+    margin: 8px 0;
+    i {
+      font-size: 20px;
+    }
+  }
+}

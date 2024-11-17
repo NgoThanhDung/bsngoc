@@ -1,0 +1,351 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('main_views'); ?>
+<!-- HERO SECTION PART START -->
+<div class="hero_section">
+ <div class="png_img"><img class="w-100 img-fluid" src="img/leaf.png" alt="" /></div>
+ <div class="container">
+ <div class="row">
+ <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+ <div class="herosection_content">
+ <h2>Chackout</h2>
+ <a href="<?php echo base_url() ?>" class="btn border-radius-0 border-transparent">Home - Pages</a>
+ </div>
+ </div>
+ </div>
+ </div>
+</div>
+<!-- HERO SECTION PART END -->
+<?php if ($style == 0) { ?>
+ <h2 style="text-align: center;margin-top: 100px;margin-bottom: 100px;font-size: 25px;">You don't have any products</h2>
+<?php }else if($style==2){ ?>
+ <h2 style="text-align: center;margin-top: 100px;margin-bottom: 100px;font-size: 25px;">Thanks for buying</h2>
+<?php } else if($style==1) { ?>
+
+ <!-- ORDER PART STRAT -->
+ <div class="order_part">
+ <div class="container">
+ <div class="row">
+ <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+ <div class="order_content">
+ <div class="order_txt">
+ <h2>Your Order</h2>
+ <p>We all know how hard it can be make sure ead lookis like demo tom make your start intoe the world of easy ase possible have encluded the demom.</p>
+ </div>
+ <div class="order_cardTotal pt-4">
+ <table class="table">
+ <thead>
+ <tr>
+ <th scope="col" class="card_total text-uppercase" colspan="2">Card total</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <th class="subtotal">Subtotal:</th>
+ <td class="text-right"><?php echo $subtotal ?></td>
+ </tr>
+ <tr>
+ <th class="discount">Discount:</th>
+ <td class="text-right"><?php echo $discount_percent ?></td>
+ </tr>
+ <tr>
+ <th>Total:</th>
+ <td class="text-right total_num"><?php echo $total ?></td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ <form action="<?php echo base_url() ?>thanh-toan/thanh-toan?" method="GET">
+ <div class="chechout_btn text-right">
+ <button type="submit" class="btn border-radius-0 border-transparent">Checkout</button>
+ </div>
+ </div>
+ </div>
+
+ <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+ <div class="billing_content">
+ <div class="billing_head text-uppercase">
+ <h2>billing details</h2>
+ <div class="billing_form">
+
+ <div class="form-row">
+ <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
+ <input type="text" class="form-control border-radius-0" id="chechout_name" name="chechout_name" value="" placeholder="Name*" required/>
+ </div>
+
+
+
+ <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
+ <input type="email" class="form-control border-radius-0" id="checkout_email" name="checkout_email" value="" placeholder="Email*"   required />
+ </div>
+
+ <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
+ <input type="text" class="form-control border-radius-0" id="checkout_phonenumber" name="checkout_phonenumber" value="" placeholder="Phone Number*" require />
+ </div>
+
+ <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
+ <input type="text" class="form-control border-radius-0" id="checkout_country" name="checkout_city" value="" placeholder="City" />
+ </div>
+
+ <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
+ <input type="text" class="form-control border-radius-0" id="checkout_state" name="checkout_state" value="" placeholder="State/Disctrict" />
+ </div>
+
+ <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
+ <input type="text" class="form-control border-radius-0" id="checkout_address" name="checkout_address" value="" placeholder="Address*:" required />
+ </div>
+
+
+ <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
+ <textarea class="form-control border-radius-0" id="checkout_billing_textarea" name="checkout_billing_textarea" rows="10" placeholder="Note Of Order :"></textarea>
+ </div>
+
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- ORDER PART END -->
+<?php } ?>
+<!-- BEST SELLER PART END -->
+
+<!-- jQuery -->
+<script src="<?= frontend('js/jquery-3.2.1.min.js') ?>"></script>
+<!-- Slick slider -->
+<script src="<?= frontend('js/slick.min.js') ?>"></script>
+<!-- Bootstrap JS -->
+<script src="<?= frontend('js/bootstrap.min.js') ?>"></script>
+<!-- scripts -->
+<script src="<?= frontend('js/scripts.js') ?>"></script>
+<script>
+	$(".banner-slider").slick({
+ infinite: false,
+ autoplay: true,
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ autoplaySpeed: 2000,
+ arrows: false,
+ dots: true,
+	});
+
+	$(".slider").slick({
+ infinite: false,
+ slidesToShow: 4,
+ slidesToScroll: 1,
+ autoplay: true,
+ autoplaySpeed: 2000,
+ arrows: false,
+ dots: true,
+
+ // the magic
+ responsive: [{
+ breakpoint: 1500,
+ settings: {
+ slidesToShow: 4,
+ infinite: true
+ }
+
+ }, {
+
+ breakpoint: 1201,
+ settings: {
+ slidesToShow: 3,
+ dots: true
+ }
+
+ }, {
+
+ breakpoint: 991,
+ settings: {
+ slidesToShow: 2,
+ dots: true
+ }
+
+ }, {
+
+ breakpoint: 600,
+ settings: {
+ slidesToShow: 1,
+ dots: true
+ }
+
+ }, {
+
+ breakpoint: 300,
+ settings: {
+ slidesToShow: 1,
+ dots: true
+ },
+ }]
+	});
+
+
+	$(".partner-slider").slick({
+ // normal options...
+ infinite: false,
+ slidesToShow: 5,
+ slidesToScroll: 2,
+ autoplay: true,
+ autoplaySpeed: 2000,
+ infinite: true,
+ arrows: true,
+
+ // the magic
+ responsive: [{
+
+ breakpoint: 1500,
+ settings: {
+ slidesToShow: 4,
+ infinite: true
+ }
+
+ }, {
+
+ breakpoint: 1201,
+ settings: {
+ slidesToShow: 3,
+ dots: true
+ }
+
+ }, {
+
+ breakpoint: 991,
+ settings: {
+ slidesToShow: 2,
+ dots: true,
+ arrows: false,
+ }
+
+ }, {
+ breakpoint: 600,
+ settings: {
+ slidesToShow: 2,
+ dots: true,
+ arrows: false
+ }
+
+ }]
+	});
+
+
+
+	$(".product-slider").slick({
+ // normal options...
+ infinite: false,
+ slidesToShow: 5,
+ slidesToScroll: 2,
+ autoplay: true,
+ autoplaySpeed: 2000,
+ infinite: true,
+ arrows: true,
+
+ // the magic
+ responsive: [{
+
+ breakpoint: 1024,
+ settings: {
+ slidesToShow: 3,
+ infinite: true
+ }
+
+ }, {
+
+ breakpoint: 600,
+ settings: {
+ slidesToShow: 2,
+ dots: true
+ }
+
+ }, {
+
+ breakpoint: 300,
+ settings: "unslick" // destroys slick
+
+ }]
+	});
+
+	//for testimonial
+	$('.testimonial-img').slick({
+ speed: 500,
+ arrows: false,
+ autoplay: true,
+ autoplaySpeed: 2000,
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ asNavFor: '.testimonial-text',
+ centerMode: true,
+ centerPadding: 0,
+ responsive: [{
+ breakpoint: 1200,
+ settings: {
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ centerMode: true,
+ focusOnSelect: true,
+ centerPadding: 0,
+ }
+ },
+ {
+ breakpoint: 768,
+ settings: {
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ centerMode: true,
+ focusOnSelect: true,
+ centerPadding: 0,
+ }
+ },
+ {
+ breakpoint: 575,
+ settings: {
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ centerMode: true,
+ focusOnSelect: true,
+ centerPadding: 0,
+ }
+ }
+ ]
+	});
+
+
+
+	$('.testimonial-text').slick({
+ infinite: false,
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ autoplay: true,
+ autoplaySpeed: 2000,
+ infinite: true,
+ arrows: true,
+ centerPadding: 0,
+ dots: false,
+ speed: 1000,
+ asNavFor: '.testimonial-img',
+ prevArrow: '<i class="icofont-double-right"></i>',
+ nextArrow: '<i class="icofont-double-left"></i>',
+
+ responsive: [{
+ breakpoint: 991,
+ settings: {
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ }
+ },
+ {
+ breakpoint: 767,
+ settings: {
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ }
+ }
+ ]
+	});
+</script>
+
+<?php $this->stopSection(); ?>
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

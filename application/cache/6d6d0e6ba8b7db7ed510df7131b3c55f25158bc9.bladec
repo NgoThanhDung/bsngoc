@@ -1,0 +1,22 @@
+<?php if($total_pages > 0): ?>
+
+ <?php if($page - 1 >= 1): ?> <?php /* if $page >= 2 */ ?>
+ <span class="product-filter-pagination-controller product-filter-prev js-product-filter-prev" data-page="<?php echo static::e($page-1); ?>">
+ <i class="fas fa-long-arrow-alt-left"></i>
+ </span>
+ <?php endif; ?>
+
+ <select name="product_filter_pagination" class="product_filter_pagination js-product_filter_pagination">
+ <?php for($i = 0; $i < $total_pages; $i++): ?>
+ <option value="<?php echo static::e($i+1); ?>" <?php echo static::e($page == $i+1 ? 'selected' : NULL); ?>><?php echo static::e($i+1); ?></option>
+ <?php endfor; ?>
+ </select>
+ <span>/ <?php echo static::e($total_pages); ?></span>
+
+ <?php if($page + 1 <= $total_pages): ?>
+ <span class="product-filter-pagination-controller product-filter-next js-product-filter-next" data-page="<?php echo static::e($page+1); ?>">
+ <i class="fas fa-long-arrow-alt-right"></i>
+ </span>
+ <?php endif; ?>
+
+<?php endif; ?>

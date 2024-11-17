@@ -1,0 +1,26 @@
+<div class="cart-sidebar-container">
+ <?php 
+ $cart = $_CI->cart->contents();
+ ?>
+ <div class="header">
+ <p class="title">Giỏ hàng</p><span class="toggle-cart-sidebar js-toggle-cart-sidebar"><i class="fas fa-times fa-2x"></i></span>
+ </div>
+ <div class="body">
+ <ul class="cart-list">
+ <?php echo $this->runChild('frontend.components._cart_sidebar_items', ['cart' => $cart]); ?>
+ </ul>
+ </div>
+ <div class="footer">
+ <div class="total">
+ <span class="text">Tổng tiền</span>
+ <span class="money">
+ <?php echo static::e(format_money($_CI->cart->total())); ?>
+
+ </span>
+ </div>
+ <div class="action-btns">
+ <a class="action-btn goto-cart" href="<?php echo static::e(base_url('gio-hang')); ?>">Xem giỏ hàng</a>
+ <a class="action-btn remove-cart js-remove-cart" href="<?php echo static::e(base_url('gio-hang/xoa')); ?>">Xóa giỏ hàng</a>
+ </div>
+ </div>
+</div>

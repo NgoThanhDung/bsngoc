@@ -1,0 +1,48 @@
+<?php 
+ $link = generate_product_link($product['alias'], $product['id']);
+ $discount_percent = 0;
+ $hover = NULL;
+ if (!empty($product['original_price']) && $product['original_price'] > 0 && $product['original_price'] > $product['price']) {
+ $discount_percent = 100 - (100 / $product['original_price']) * $product['price'];
+ $discount_percent = round($discount_percent);
+ }
+ if (!empty($product['image2'])) {
+ $hover = "hover-animation";
+ }
+ ?>
+<div class="one-product-container">
+ <div class="product-images">
+ <a class="product-image <?php echo static::e($hover); ?>" href="<?php echo static::e($link); ?>">
+ <img src="<?php echo static::e(base_url($product['image1'])); ?>" alt=""/>
+ <?php if($hover): ?>
+ <img src="<?php echo static::e(base_url($product['image2'])); ?>" alt=""/>
+ <?php endif; ?>
+ </a>
+ <?php if($discount_percent > 0): ?>
+ <span class="product-discount">-<?php echo static::e($discount_percent); ?><sup>%</sup></span>
+ <?php endif; ?>
+ </div>
+ <div class="product-info">
+ <div class="product-price">
+ <?php if($discount_percent > 0): ?>
+ <span class="price price-highlight">
+ <?php /* myhelper_helper.php */ ?>
+ <?php echo static::e(format_money($product['price'])); ?>
+
+ </span>
+ <span class="price price-del">
+ <?php echo static::e(format_money($product['original_price'])); ?>
+
+ </span>
+ <?php else: ?>
+ <span class="price"><?php echo static::e(format_money($product['price'])); ?></span>
+ <?php endif; ?>
+ </div>
+ <p class="product-name">
+ <a href="#/">
+ <?php echo static::e($product['name']); ?>
+
+ </a>
+ </p>
+ </div>
+</div>

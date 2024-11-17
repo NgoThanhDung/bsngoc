@@ -1,0 +1,81 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('main_views'); ?>
+	<section class="section-paddingY auth-page">
+ <div class="container">
+ <div class="section-header">
+ <p class="section-title">Đăng nhập / Tạo tài khoản</p>
+ <p class="section-subtitle">Hãy tạo tài khoản / đăng nhập<br/>để lưu và theo dõi đơn hàng của bạn</p>
+ </div>
+ <div class="section-body">
+ <div class="row">
+ <div class="col-12 col-lg-6">
+ <div class="singin-form-container auth-form-container">
+ <div class="header">
+ <p class="title" data-hash="login">Đăng nhập</p>
+ </div>
+ <div class="body">
+ <?php echo form_open(base_url('dang-nhap/dang-nhap'), ['class'=>'login-form']); ?>
+
+ <div class="auth-control">
+ <input type="email" name="email" required="required" placeholder="Email"/>
+ </div>
+ <div class="auth-control">
+ <input type="password" name="password" required="required" placeholder="Mật khẩu"/>
+ </div>
+ <div class="auth-control user-nav">
+ <a class="password-forgot" href="<?php echo static::e(base_url('mat-khau/quen')); ?>">Quên mật khẩu</a>
+ </div>
+ <div class="auth-control">
+ <button class="signin-button dark-button" type="submit">Đăng nhập</button>
+ </div>
+ <?php echo form_close(); ?>
+
+ </div>
+ <div class="footer"></div>
+ </div>
+ </div>
+ <div class="col-12 col-lg-6">
+ <div class="singup-form-container auth-form-container">
+ <div class="header">
+ <p class="title" data-hash="register">Tạo tài khoản</p>
+ </div>
+ <?php echo form_open(base_url('dang-ky/xu-ly-dang-ky'), ['class'=>'register-form']); ?>
+
+ <div class="auth-control">
+ <input autocomplete="off" type="text" name="firstname" required="required" placeholder="Họ và tên đệm"/>
+ </div>
+ <div class="auth-control">
+ <input autocomplete="off" type="text" name="lastname" required="required" placeholder="Tên"/>
+ </div>
+ <div class="auth-control radio-group-control">
+ <label class="one-radio">Nam
+ <input type="radio" value="male" name="sex" checked="checked"/>
+ </label>
+ <label>Nữ
+ <input type="radio" value="female" name="sex"/>
+ </label>
+ </div>
+ <div class="auth-control">
+ <input autocomplete="off" type="email" name="email" required="required" placeholder="Email đăng ký"/>
+ </div>
+ <div class="auth-control">
+ <input autocomplete="off" type="password" name="password" required="required" placeholder="Mật khẩu"/>
+ </div>
+ <div class="auth-control">
+ <input autocomplete="off" type="password" name="password_confirmation" required="required" placeholder="Nhập lại mật khẩu"/>
+ </div>
+ <div class="auth-control">
+ <button class="signup-button dark-button" type="submit">Tạo tài khoản</button>
+ </div>
+ <?php echo form_close(); ?>
+
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+	</section>
+<?php $this->stopSection(); ?>
+
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

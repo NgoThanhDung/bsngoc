@@ -1,0 +1,70 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('main_views'); ?>
+ <section id="sliderSection">
+ <div class="row">
+ <div class="col-lg-8 col-md-8 col-sm-8">
+ <?php if ($stt == 1) { ?>
+ <?php foreach ($rices as $item) { ?>
+ <div class="col-lg-6 col-md-6 col-sm-6">
+ <div class="single_post_content_left" style="width: 100% !important;">
+ <ul class="business_catgnav  wow fadeInDown">
+ <li>
+ <figure class="bsbig_fig"> <a
+ href="<?php echo base_url(); ?>gao-sach-chi-tiet/<?php echo $item['rices_alias']; ?>/<?php echo $item['rices_id']; ?>"
+ class="featured_img"> <img alt=""
+ src="<?php echo base_url(); ?><?php echo $item['rices_thumbnail']; ?>" width="325px" height="325px">
+ <span class="overlay"></span> </a>
+ <figcaption> <a
+ href="<?php echo base_url(); ?>gao-sach-chi-tiet/<?php echo $item['rices_alias']; ?>/<?php echo $item['rices_id']; ?>"></a><?php echo $item['rices_name']; ?>
+ </figcaption>
+ <p class="text-caption"><?php echo $item['rices_caption']; ?></p>
+ </figure>
+ </li>
+ </ul>
+ </div>
+ </div>
+ <?php } ?>
+ <?php } else { ?>
+ <h2>Hiện tại không có bài đăng nào</h2>
+ <?php } ?>
+ </div>
+ <div class="col-lg-4 col-md-4 col-sm-4">
+ <?php echo $this->runChild('frontend.components._single_sidebar'); ?>
+ </div>
+ </div>
+ <nav aria-label="Page navigation">
+ <ul class="pagination">
+ <?php
+ if ($stt == 1) {
+ echo $pagination;
+ }
+ ?>
+ </ul>
+ </nav>
+ </section>
+ <style>
+ .active {
+ background-color: #0097d9 !important;
+ }
+
+ .text-caption {
+ display: block;
+ /* Fallback trong trường hợp trình duyệt không hỗ trợ display dạng box */
+ display: -webkit-box;
+ line-height: 16px;
+ /* Fallback  */
+ max-height: 74px;
+ /* Fallback số dòng bạn muốn giới hạn */
+ -webkit-line-clamp: 3;
+ /* Số dòng bạn muốn giới hạn */
+ -webkit-box-orient: vertical;
+ visibility: visible;
+ text-overflow: ellipsis;
+ overflow: hidden;
+ text-align: justify;
+ }
+ </style>
+<?php $this->stopSection(); ?>
+
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

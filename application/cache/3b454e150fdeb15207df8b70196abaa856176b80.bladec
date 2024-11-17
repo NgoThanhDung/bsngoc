@@ -1,0 +1,137 @@
+<?php $_shouldextend[1]=1; ?>
+<?php $this->startSection('main_views'); ?>
+<article class="entry">
+ <div class="entry-content">
+ <!-- Hero-->
+ <div class="home-hero pt-5 pb-6 pt-lg-8 pb-lg-9">
+ <div class="container">
+ <div class="row">
+ <div class="col-lg-5">
+ <div class="pr-lg-1">
+ <h2 class="mb-2 mb-lg-2">Certified Partners​</h2>
+ <p class="pr-lg-3">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="container mt-lg-7 mt-5">
+ <div class="row gx-5 gy-5 mb-5">
+ <div class="col-lg-4">
+ <div class="border border-black">
+ <div class="text-center align-items-center">
+ <div class="px-lg-4 py-lg-5 px-4 py-5">
+ <div class="px-lg-5 mt-lg-4 px-5 mt-4"><img src="<?php echo base_url() ?>public/frontend/assets/images/logo/1.png" alt="Meeting"></div>
+ <div class="mt-lg-4 mt-5 has-soft-orange-color">
+ <h4>Investment Partner</h4>
+ </div>
+ <div class="px-lg-3 mt-lg-3 px-3 mt-3">
+ <p>Aptent taciti sociosqu ad litora torquent per con ubia nos inceptos himenaeos. Pellentesque eget scelerisque turpis et consequat enim uisque at.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-4">
+ <div class="border border-black">
+ <div class="text-center align-items-center">
+ <div class="px-lg-4 py-lg-5 px-4 py-5">
+ <div class="px-lg-5 mt-lg-4 px-5 mt-4"><img src="<?php echo base_url() ?>public/frontend/assets/images/logo/2.png" alt="Meeting"></div>
+ <div class="mt-lg-4 mt-5 has-soft-orange-color">
+ <h4>Bank Partner</h4>
+ </div>
+ <div class="px-lg-3 mt-lg-3 px-3 mt-3">
+ <p>Aptent taciti sociosqu ad litora torquent per con ubia nos inceptos himenaeos. Pellentesque eget scelerisque turpis et consequat enim uisque at.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-4">
+ <div class="border border-black">
+ <div class="text-center align-items-center">
+ <div class="px-lg-4 py-lg-5 px-4 py-5">
+ <div class="px-lg-5 mt-lg-4 px-5 mt-4"><img src="<?php echo base_url() ?>public/frontend/assets/images/logo/3.png" alt="Meeting"></div>
+ <div class="mt-lg-4 mt-5 has-soft-orange-color">
+ <h4>Construction Partner</h4>
+ </div>
+ <div class="px-lg-3 mt-lg-3 px-3 mt-3">
+ <p>Aptent taciti sociosqu ad litora torquent per con ubia nos inceptos himenaeos. Pellentesque eget scelerisque turpis et consequat enim uisque at.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="row gx-5 gy-5">
+ <div class="col-lg-4">
+ <div class="border border-black">
+ <div class="text-center align-items-center">
+ <div class="px-lg-4 py-lg-5 px-4 py-5">
+ <div class="px-lg-5 mt-lg-4 px-5 mt-4"><img src="<?php echo base_url() ?>public/frontend/assets/images/logo/4.png" alt="Meeting"></div>
+ <div class="mt-lg-4 mt-5 has-soft-orange-color">
+ <h4>Construction Partner</h4>
+ </div>
+ <div class="px-lg-3 mt-lg-3 px-3 mt-3">
+ <p>Aptent taciti sociosqu ad litora torquent per con ubia nos inceptos himenaeos. Pellentesque eget scelerisque turpis et consequat enim uisque at.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-4">
+ <div class="border border-black">
+ <div class="text-center align-items-center">
+ <div class="px-lg-4 py-lg-5 px-4 py-5">
+ <div class="px-lg-5 mt-lg-4 px-5 mt-4"><img src="<?php echo base_url() ?>public/frontend/assets/images/logo/5.png" alt="Meeting"></div>
+ <div class="mt-lg-4 mt-5 has-soft-orange-color">
+ <h4>Construction Partner</h4>
+ </div>
+ <div class="px-lg-3 mt-lg-3 px-3 mt-3">
+ <p>Aptent taciti sociosqu ad litora torquent per con ubia nos inceptos himenaeos. Pellentesque eget scelerisque turpis et consequat enim uisque at.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-4">
+ <div class="border border-black">
+ <div class="text-center align-items-center">
+ <div class="px-lg-4 py-lg-5 px-4 py-5">
+ <div class="px-lg-5 mt-lg-4 px-5 mt-4"><img src="<?php echo base_url() ?>public/frontend/assets/images/logo/6.png" alt="Meeting"></div>
+ <div class="mt-lg-4 mt-5 has-soft-orange-color">
+ <h4>Construction Partner</h4>
+ </div>
+ <div class="px-lg-3 mt-lg-3 px-3 mt-3">
+ <p>Aptent taciti sociosqu ad litora torquent per con ubia nos inceptos himenaeos. Pellentesque eget scelerisque turpis et consequat enim uisque at.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- form subscription  -->
+ <?php echo $form_submit ?>
+</article>
+ <!-- jquery-->
+ <script src="<?= frontend('assets/js/jquery.min.js')?>"></script>
+ <!-- lozad js-->
+ <script src="<?= frontend('assets/js/lozad.min.js')?>"></script>
+ <!-- Bootstrap js-->
+ <script src="<?= frontend('assets/js/bootstrap.bundle.min.js')?>"></script>
+ <!-- Aos js-->
+ <script src="<?= frontend('assets/js/aos.js')?>"></script>
+ <!-- Slick flickity js-->
+ <script src="<?= frontend('assets/js/flickity.pkgd.min.js')?>"></script>
+ <!-- Magnific popup js-->
+ <script src="<?= frontend('assets/js/jquery.magnific-popup.min.js')?>"></script>
+ <!-- Countdown js-->
+ <script src="<?= frontend('assets/js/jquery.countdown.js')?>"></script>
+ <!-- CountTo js-->
+ <script src="<?= frontend('assets/js/jquery.countTo.js')?>"></script>
+ <!-- Global - Main js-->
+ <script src="<?= frontend('assets/js/global.js')?>"></script>
+
+<?php $this->stopSection(); ?>
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

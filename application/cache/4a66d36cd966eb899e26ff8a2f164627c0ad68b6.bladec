@@ -1,0 +1,10 @@
+<?php 
+ $slideshow = $_CI->website->get_header_slideshow();
+ ?>
+<div class="container">
+ <div class="owl-carousel main-carousel">
+ <?php $__currentLoopData = $slideshow; $this->addLoop($__currentLoopData); foreach($__currentLoopData as $slide): $this->incrementLoopIndices(); $loop = $this->getFirstLoop(); ?>
+ <div><img src="<?php echo static::e(base_url($slide['url'])); ?>" alt=""/></div>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </div>
+</div>

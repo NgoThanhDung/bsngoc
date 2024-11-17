@@ -1,0 +1,401 @@
+ <?php $_shouldextend[1]=1; ?>
+
+ <?php $this->startSection('main_views'); ?>
+ <!-- HERO SECTION PART START -->
+ <div class="hero_section">
+ <div class="png_img"><img class="img-fluid" src="img/leaf.png" alt="" /></div>
+ <div class="container">
+ <div class="row">
+ <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+ <div class="herosection_content">
+ <h2>Cart Overview</h2>
+ <a href="<?php echo base_url() ?>" class="btn border-radius-0 border-transparent">Home - Pages</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- HERO SECTION PART END -->
+
+ <!-- CART OVERVIEW PART START -->
+ <div class="cart_overview">
+ <div class="container">
+ <div class="row">
+ <div class="col-xs-12 col-sm-12 col-md-12 table-responsive">
+ <table class="table">
+ <thead>
+ <tr class="cartoverview_title">
+ <th>IMAGES</th>
+ <th>PRODUCT</th>
+ <th>PRICE</th>
+ <th>QUANTITY</th>
+ <th>TOTAL</th>
+ <th></th>
+ </tr>
+ </thead>
+ <tbody>
+ <?php foreach ($cart as $item) { ?>
+
+ <tr>
+ <th scope="row">
+ <div class="thamnail_img">
+ <img width="100" height="100" class="img-fluid" src="<?php echo $item['image'] ?>" alt="" />
+ </div>
+ </th>
+
+ <td class="align-middle"><b><?php echo $item['name'] ?></b></td>
+ <td class="align-middle"><?php echo $item['price'] ?></td>
+
+ <td class="align-middle">
+ <div class="cart d-flex">
+ <div class="quantity d-flex">
+ <div class="left_arrow">
+ <button type="button" id="down_<?php echo $item['id'] ?>"><i class="icofont-arrow-left"></i></button>
+ </div>
+ <div class="quantity_num" id="quantity_<?php echo $item['id'] ?>"><?php echo $item['qty'] ?></div>
+ <div class="right_arrow">
+ <button type="button" id="up_<?php echo $item['id'] ?>"><i class="icofont-arrow-right"></i></button>
+ </div>
+ </div>
+ </div>
+ </td>
+ <td class="align-middle"><?php echo $item['subtotal'] ?></td>
+ <td class="align-middle"><button id="<?php echo $item['rowid'] ?>" class="icofont-close text-danger"></button></td>
+
+ <!-- Script -->
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script type='text/javascript'>
+ 
+ $('#down_<?php echo $item['id'] ?>').click(function() {
+ 
+ $.ajax({
+ type: "GET",
+ data: "id=<?php echo $item['rowid'] ?>&qty=<?php echo $item['qty'] -1?>",
+ url: "<?php echo base_url() ?>frontend/cart/update_qty_id",
+ success: function() {
+ window.location.reload();
+ }
+ });
+ });
+ $('#up_<?php echo $item['id'] ?>').click(function() {
+
+ $.ajax({
+ type: "GET",
+ data: "id=<?php echo $item['rowid'] ?>&qty=<?php echo $item['qty'] +1?>",
+ url: "<?php echo base_url() ?>frontend/cart/update_qty_id",
+ success: function() {
+ window.location.reload();
+ }
+ });
+ });
+
+
+ $('#<?php echo $item['rowid'] ?>').click(function() {
+
+ $.ajax({
+ type: "GET",
+ data: "id=<?php echo $item['rowid'] ?>",
+ url: "<?php echo base_url() ?>frontend/cart/delete_cart_id",
+ success: function() {
+ alert("Delete product ?");
+ window.location.reload();
+ }
+ });
+ });
+ </script>
+ <?php } ?>
+ </tr>
+
+ </tbody>
+ </table>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- CART OVERVIEW PART END -->
+
+ <!-- COUPON PART START -->
+ <div class="coupon_part">
+ <div class="container">
+ <div class="row justify-content-between">
+ <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+ <!-- <div class="serach_btn">
+ <form action="#">
+ <div class="search_ber">
+ <input type="text" class="form-control search_button" id="serach_button" name="serach_button" value="" placeholder="Apply Coupon" />
+ <div class="coupon_btn">
+ <a href="#" class="border-radius-0">APPLY COUPON</a>
+ </div>
+ </div>
+ </form>
+ </div> -->
+ </div>
+ <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+ <div class="order_cardTotal">
+ <table class="table">
+ <thead>
+ <tr>
+ <th scope="col" class="card_total text-uppercase" colspan="2">Card total</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <th scope="row" class="subtotal">Subtotal:</th>
+ <td class="text-right"><?php echo $subtotal ?></td>
+ </tr>
+ <tr>
+ <th scope="row" class="discount">Discount:</th>
+ <td class="text-right"><?php echo $discount_percent ?></td>
+ </tr>
+ <tr>
+ <th scope="row">Total:</th>
+ <td class="text-right total_num"><?php echo $total ?></td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ <div class="chechout_btn text-right">
+ <a href="<?php echo base_url() ?>thanh-toan/xem-truoc" class="btn border-radius-0 border-transparent">Checkout</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- COUPON PART END -->
+
+<!-- jQuery -->
+<script src="<?= frontend('js/jquery-3.2.1.min.js') ?>"></script>
+<!-- Slick slider -->
+<script src="<?= frontend('js/slick.min.js') ?>"></script>
+<!-- Bootstrap JS -->
+<script src="<?= frontend('js/bootstrap.min.js') ?>"></script>
+<!-- scripts -->
+<script src="<?= frontend('js/scripts.js') ?>"></script>
+<script>
+	$(".banner-slider").slick({
+ infinite: false,
+ autoplay: true,
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ autoplaySpeed: 2000,
+ arrows: false,
+ dots: true,
+	});
+
+	$(".slider").slick({
+ infinite: false,
+ slidesToShow: 4,
+ slidesToScroll: 1,
+ autoplay: true,
+ autoplaySpeed: 2000,
+ arrows: false,
+ dots: true,
+
+ // the magic
+ responsive: [{
+ breakpoint: 1500,
+ settings: {
+ slidesToShow: 4,
+ infinite: true
+ }
+
+ }, {
+
+ breakpoint: 1201,
+ settings: {
+ slidesToShow: 3,
+ dots: true
+ }
+
+ }, {
+
+ breakpoint: 991,
+ settings: {
+ slidesToShow: 2,
+ dots: true
+ }
+
+ }, {
+
+ breakpoint: 600,
+ settings: {
+ slidesToShow: 1,
+ dots: true
+ }
+
+ }, {
+
+ breakpoint: 300,
+ settings: {
+ slidesToShow: 1,
+ dots: true
+ },
+ }]
+	});
+
+
+	$(".partner-slider").slick({
+ // normal options...
+ infinite: false,
+ slidesToShow: 5,
+ slidesToScroll: 2,
+ autoplay: true,
+ autoplaySpeed: 2000,
+ infinite: true,
+ arrows: true,
+
+ // the magic
+ responsive: [{
+
+ breakpoint: 1500,
+ settings: {
+ slidesToShow: 4,
+ infinite: true
+ }
+
+ }, {
+
+ breakpoint: 1201,
+ settings: {
+ slidesToShow: 3,
+ dots: true
+ }
+
+ }, {
+
+ breakpoint: 991,
+ settings: {
+ slidesToShow: 2,
+ dots: true,
+ arrows: false,
+ }
+
+ }, {
+ breakpoint: 600,
+ settings: {
+ slidesToShow: 2,
+ dots: true,
+ arrows: false
+ }
+
+ }]
+	});
+
+
+
+	$(".product-slider").slick({
+ // normal options...
+ infinite: false,
+ slidesToShow: 5,
+ slidesToScroll: 2,
+ autoplay: true,
+ autoplaySpeed: 2000,
+ infinite: true,
+ arrows: true,
+
+ // the magic
+ responsive: [{
+
+ breakpoint: 1024,
+ settings: {
+ slidesToShow: 3,
+ infinite: true
+ }
+
+ }, {
+
+ breakpoint: 600,
+ settings: {
+ slidesToShow: 2,
+ dots: true
+ }
+
+ }, {
+
+ breakpoint: 300,
+ settings: "unslick" // destroys slick
+
+ }]
+	});
+
+	//for testimonial
+	$('.testimonial-img').slick({
+ speed: 500,
+ arrows: false,
+ autoplay: true,
+ autoplaySpeed: 2000,
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ asNavFor: '.testimonial-text',
+ centerMode: true,
+ centerPadding: 0,
+ responsive: [{
+ breakpoint: 1200,
+ settings: {
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ centerMode: true,
+ focusOnSelect: true,
+ centerPadding: 0,
+ }
+ },
+ {
+ breakpoint: 768,
+ settings: {
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ centerMode: true,
+ focusOnSelect: true,
+ centerPadding: 0,
+ }
+ },
+ {
+ breakpoint: 575,
+ settings: {
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ centerMode: true,
+ focusOnSelect: true,
+ centerPadding: 0,
+ }
+ }
+ ]
+	});
+
+
+
+	$('.testimonial-text').slick({
+ infinite: false,
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ autoplay: true,
+ autoplaySpeed: 2000,
+ infinite: true,
+ arrows: true,
+ centerPadding: 0,
+ dots: false,
+ speed: 1000,
+ asNavFor: '.testimonial-img',
+ prevArrow: '<i class="icofont-double-right"></i>',
+ nextArrow: '<i class="icofont-double-left"></i>',
+
+ responsive: [{
+ breakpoint: 991,
+ settings: {
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ }
+ },
+ {
+ breakpoint: 767,
+ settings: {
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ }
+ }
+ ]
+	});
+</script>
+
+ <?php $this->stopSection(); ?>
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

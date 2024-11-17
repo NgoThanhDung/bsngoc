@@ -1,0 +1,29 @@
+<div class="container px-0">
+ <div class="row align-items-center gx-7 mb-lg-9 mt-lg-9 mt-7 mb-7">
+ <div class="col-lg-6">
+ <div class="px-3">
+ <h2 class="mb-3">Subscribe and keep up with the latest from Moiz</h2>
+ <p class="pr-lg-7">Maecenas ultricies, ligula id condimentum efficitur, orci diam tincidunt nisi, et mollis nisl dui ut risus. Nam neque magna, rutrum id sapien elementum, ornare pretium arcu. Suspendisse lacinia pharetra lobortis. Donec vitae eros ut velit lacinia aliquam sodales hendrerit.</p>
+ <p class="pr-lg-7">Phasellus ut urna eget justo consectetur at ante. Etiam ipsum neque, feugiat ut gravida non, imperdiet nec mi. Quisque vitae urna ut mauris laoreet ullamcorper quis sit amet tellus</p>
+ </div>
+ </div>
+ <div class="col-lg-6 mt-4">
+ <div class="border-drop-left border-color-soft-creame">
+ <div class="has-soft-creame-background-color py-6 px-5 py-lg-7 px-lg-6">
+ <form action="#">
+ <div class="mb-lg-4 mb-4">
+ <input class="form-control" id="fname" type="text" name="fname" value="First Name">
+ </div>
+ <div class="mb-lg-4 mb-4">
+ <input class="form-control" id="lname" type="text" name="lname" value="Last Name">
+ </div>
+ <div class="mb-lg-4 mb-4">
+ <p>Your email will be safely stored in our database. We respect your privacy. Signing up is quick and easy and you can unsubscribe instantly at any time by clicking the link in the footer of our emails.</p>
+ </div>
+ <div class="mb-lg-4"> <a class="btn btn-default rounded-0 btn-block" href="#">Subscribe</a></div>
+ </form>
+ </div>
+ </div>
+ </div>
+ </div>
+</div>

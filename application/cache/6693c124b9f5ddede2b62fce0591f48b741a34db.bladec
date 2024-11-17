@@ -1,0 +1,12 @@
+<!-- MESSAGE FROM SERVER -->
+<div class="msg-top <?= $_CI->session->flashdata('msg') || validation_errors() !== '' ? 'show' : '' ?>">
+ <div class="msg-from-server msg-container">
+ <?php if(validation_errors() !== ''): ?>
+ <?= validation_errors('<span class="error">', '</span><br>') ?>
+ <?php endif; ?>
+ <?php if($_CI->session->flashdata('msg')): ?>
+ <?= $_CI->session->flashdata('msg') ?>
+ <?php endif; ?>
+ <span class="close-msg">&times;</span>
+ </div>
+</div>

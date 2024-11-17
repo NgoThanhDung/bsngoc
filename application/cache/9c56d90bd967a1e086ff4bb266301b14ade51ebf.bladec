@@ -1,0 +1,44 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('main_views'); ?>
+ <section class="section-paddingY article-page">
+ <div class="container">
+ <div class="section-header">
+ <p class="section-title">
+ <?php echo static::e($article['name']); ?>
+
+ </p>
+ <p class="header-info">
+ <!--  <span class="created-at"><?php echo static::e(date('d.m.Y', strtotime($article['created_at']))); ?></span> -->
+ 
+<!--           <a class="article-category" href="<?php echo static::e(generate_news_category_link($article['category_alias'])); ?>">
+ <?php echo static::e($article['category_name']); ?>
+
+ </a> -->
+ </p>
+ </div>
+ <div class="section-body">
+ <div class="row">
+ <div class="col-12">
+ <div class="article-content">
+ <?php echo $article['content']; ?>
+
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="section-bottom">
+ <div class="article-nav">
+ <a class="nav-link prev <?php echo static::e($prev_article ? NULL : 'no-more-article'); ?>" href="<?php echo static::e($prev_article ? generate_news_link($prev_article['alias'], $prev_article['id']) : '#'); ?>">
+ Bài trước
+ </a>
+ <a class="nav-link next <?php echo static::e($next_article ? NULL : 'no-more-article'); ?>" href="<?php echo static::e($next_article ? generate_news_link($next_article['alias'], $next_article['id']) : 'javascript:void(0)'); ?>">
+ Bài sau
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+<?php $this->stopSection(); ?>
+
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

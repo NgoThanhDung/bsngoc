@@ -1,0 +1,22 @@
+<div class="user-password-page">
+ <div class="">
+ <div class="change-password-form-container auth-form-container">
+ <div class="body">
+ <?php echo form_open(base_url('mat-khau/cap-nhat'), ['class'=>'change-password-form']); ?>
+
+ <div class="auth-control">
+ <input type="password" name="password" required="required" placeholder="Mật khẩu mới"/>
+ </div>
+ <div class="auth-control">
+ <input type="password" name="password_confirmation" required="required" placeholder="Xác nhận mật khẩu mới"/>
+ </div>
+ <div class="auth-control text-left">
+ <button class="dark-button button" type="submit">Đặt lại mật khẩu</button>
+ </div>
+ <?php echo form_close(); ?>
+
+ </div>
+ <div class="footer"></div>
+ </div>
+ </div>
+</div>

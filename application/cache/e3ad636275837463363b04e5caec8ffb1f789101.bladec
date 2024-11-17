@@ -1,0 +1,23 @@
+<!-- <?php /* .show */ ?>
+<div class="popup-newsletter js-popup-newsletter">
+ <div class="newsletter-header">
+ <span class="newsletter-close js-newsletter-close">
+ <i class="fas fa-times"></i>
+ </span>
+ <div class="logo">
+ <img src="<?php echo static::e($_CI->website->website[0]['logo']); ?>" alt="">
+ </div>
+ <p class="title">Tham gia nhận thông báo ưu đãi lên đến 80% !</p>
+ </div>
+ <div class="newsletter-body">
+ <form action="javascript:void(0)" class="newsletter-form js-newsletter-form">
+ <input type="text" name="newsletter_fullname" placeholder="Họ và tên" required>
+ <input type="text" name="newsletter_phone" placeholder="Số điện thoại" pattern="[0][1-9][0-9]{8,9}" required>
+ <button type="submit" class="newsletter-registration js-newsletter-registration">Đăng kí</button>
+ </form>
+ <div class="message">
+ <p class="newsletter-message js-newsletter-message"></p>
+ </div>
+ </div>
+ <?php /* <div class="newsletter-footer"></div> */ ?>
+</div> -->

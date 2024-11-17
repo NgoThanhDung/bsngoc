@@ -1,0 +1,78 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('main_views'); ?>
+ <article class="entry">
+ <div class="entry-content">
+ <!-- Hero-->
+ <div class="home-hero py-5 pt-lg-8 pb-lg-8">
+ <div class="container">
+ <div class="row">
+ <div class="col-lg-5">
+ <div class="mb-2 mb-lg-2 has-soft-orange-color">
+ <h2>FAQs</h2>
+ </div>
+ <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="pt-lg-9 pb-lg-8 pt-7 pb-7">
+ <div class="container">
+ <div class="row">
+ <div class="col-lg-8 offset-lg-2">
+ <div class="accordion" id="accordionExample">
+ <?php foreach ($faq as $item) { ?>
+ <div class="card border-0 mt-lg-5 mt-4">
+ <div class="card-header home-hero" id="headingsix">
+ <a class="h5 py-lg-4 px-lg-5 py-3 px-3 d-block" href="#" data-toggle="collapse" data-target="#collapsesix_<?php echo $item['id'] ?>" aria-expanded="false" aria-controls="collapsesix"><?php echo $item['question'] ?></a></div>
+ <div class="collapse" id="collapsesix_<?php echo $item['id'] ?>" aria-labelledby="headingsix" data-parent="#accordionExample">
+ <div class="py-lg-2 px-lg-2 home-hero mt-lg-3">
+ <div class="card-body mt-2">
+ <?php echo $item['ans'] ?>
+ </div>
+ </div>
+ </div>
+ </div>
+ <?php } ?>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="container">
+ <div class="row">
+ <div class="col-lg-8 offset-2 text-center"></div>
+ <div class="col-sm-8 offset-sm-2 text-center">
+ <div class="mb-lg-2 mb-3">
+ <h4>Still no luck? We can help!</h4>
+ </div>
+ <div class="mt-lg-4 mb-4"><a class="btn btn-default rounded-0" href="<?php echo base_url() ?>lien-he">Submit A Request</a></div>
+ </div>
+ </div>
+ </div>
+ <!-- form subscription  -->
+ <?php echo $form_submit ?>
+ </div>
+ </article>
+
+<!-- jquery-->
+<script src="<?= frontend('assets/js/jquery.min.js') ?>"></script>
+<!-- lozad js-->
+<script src="<?= frontend('assets/js/lozad.min.js') ?>"></script>
+<!-- Bootstrap js-->
+<script src="<?= frontend('assets/js/bootstrap.bundle.min.js') ?>"></script>
+<!-- Aos js-->
+<script src="<?= frontend('assets/js/aos.js') ?>"></script>
+<!-- Slick flickity js-->
+<script src="<?= frontend('assets/js/flickity.pkgd.min.js') ?>"></script>
+<!-- Magnific popup js-->
+<script src="<?= frontend('assets/js/jquery.magnific-popup.min.js') ?>"></script>
+<!-- Countdown js-->
+<script src="<?= frontend('assets/js/jquery.countdown.js') ?>"></script>
+<!-- CountTo js-->
+<script src="<?= frontend('assets/js/jquery.countTo.js') ?>"></script>
+<!-- Global - Main js-->
+<script src="<?= frontend('assets/js/global.js') ?>"></script>
+
+<?php $this->stopSection(); ?>
+<?php if (@$_shouldextend[1]) { echo $this->runChild('frontend.master'); } ?>

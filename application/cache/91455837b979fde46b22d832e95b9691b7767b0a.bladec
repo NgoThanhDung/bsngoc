@@ -1,0 +1,67 @@
+<?php 
+ $desktop_menu   = $_CI->website->get_header_menu();
+ $recursive_menu = get_recursive_menu($desktop_menu);
+ ?>
+<div class="mobile-menu-container">
+ <div class="header">
+ <p class="title">MENU</p><span class="toggle-mobile-menu js-toggle-mobile-menu"><i class="fas fa-times fa-2x"></i></span>
+ </div>
+ <div class="body">
+ <ul class="mobile-menu-list">
+ <?php $__currentLoopData = $recursive_menu; $this->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $this->incrementLoopIndices(); $loop = $this->getFirstLoop(); ?>
+ <li>
+ <a href="<?php echo static::e(base_url($item['link'])); ?>">
+ <?php echo static::e($item['name']); ?>
+
+ <?php if($item['submenu']): ?>
+ <i class="dropdown-button js-dropdown-button fas fa-caret-down"></i>
+ <?php endif; ?>
+ </a>
+ <?php if($item['submenu']): ?>
+ <?php 
+ render_mobile_menu($item)
+ ?>
+ <?php endif; ?>
+ </li>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ <?php /* <li><a href="#/">Giới thiệu</a></li>
+ <li><a href="#/">Sản phẩm<i class="dropdown-button js-dropdown-button fas fa-caret-down"></i></a>
+ <ul class="submenu">
+ <li><a href="#/">Áo kiểu</a></li>
+ <li><a href="#/">Áo thun</a></li>
+ <li><a href="#/">Đầm</a></li>
+ <li><a href="#/">Nội y</a></li>
+ <li><a href="#/">Quần</a></li>
+ <li><a href="#/">Váy</a></li>
+ </ul>
+ </li>
+ <li><a href="#/">SALE</a></li>
+ <li><a href="#/">Tuyển dụng</a></li>
+ <li><a href="#/">Cửa hàng</a></li> */ ?>
+ </ul>
+ </div>
+
+ <div class="footer">
+ <div class="auth-actions depth1">
+ <?php if($_CI->session->login): ?>
+ <a class="auth-action" href="<?php echo static::e(base_url('trang-ca-nhan')); ?>">
+ <i class="fas fa-user-circle"></i>
+ <span>Trang cá nhân</span>
+ </a>
+ <a class="auth-action" href="<?php echo static::e(base_url('dang-xuat')); ?>">
+ <i class="fas fa-user-plus"></i>
+ <span>Đăng xuất</span>
+ </a>
+ <?php else: ?>
+ <a class="auth-action" href="<?php echo static::e(base_url('dang-nhap#login')); ?>">
+ <i class="fas fa-user-circle"></i>
+ <span>Đăng nhập</span>
+ </a>
+ <a class="auth-action" href="<?php echo static::e(base_url('dang-ky#register')); ?>">
+ <i class="fas fa-user-plus"></i>
+ <span>Đăng kí</span>
+ </a>
+ <?php endif; ?>
+ </div>
+ </div>
+</div>
