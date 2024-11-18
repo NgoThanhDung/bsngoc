@@ -71,10 +71,10 @@
 
                             <div class="doctor-info-modal">
                                 <div class="row box-info">
-                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <div class="col-3 col-lg-3 col-md-3 col-sm-3">
                                         <img src="https://via.placeholder.com/120" alt="Doctor Image" id="doctorImage" class="doctor-image-modal">
                                     </div>
-                                    <div class="col-lg-9 col-md-9 col-sm-9 text-info">
+                                    <div class="col-9 col-lg-9 col-md-9 col-sm-9 text-info">
                                         <h6 id="doctorName">Tên bác sĩ</h6>
                                         <p id="doctorBirthYear">Năm sinh</p>
                                         <p id="doctorSpecialty">Chuyên khoa</p>
@@ -104,15 +104,12 @@
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingWorkExperience">
                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWorkExperience" aria-expanded="true" aria-controls="collapseWorkExperience">
-                                                    QUÁ TRÌNH CÔNG TÁC
+                                                    Quá trình công tác
                                                 </button>
                                             </h2>
                                             <div id="collapseWorkExperience" class="accordion-collapse collapse show" aria-labelledby="headingWorkExperience">
                                                 <div class="accordion-body">
-                                                    <ul>
-                                                        <li>2008 đến nay: Giảng viên BM Nội TQ - ĐHYD</li>
-                                                        <li>2008 đến nay: BV Nguyễn Tri Phương</li>
-                                                    </ul>
+                                                    <p>2008 đến nay: Giảng viên BM Nội TQ - ĐHYD</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -120,16 +117,12 @@
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingEducation">
                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEducation" aria-expanded="true" aria-controls="collapseEducation">
-                                                    QUÁ TRÌNH HỌC TẬP
+                                                    Quá trình học tập
                                                 </button>
                                             </h2>
                                             <div id="collapseEducation" class="accordion-collapse collapse show" aria-labelledby="headingEducation">
                                                 <div class="accordion-body">
-                                                    <ul>
-                                                        <li>1996 - 2002: Bác sĩ đa khoa chính quy - ĐHYD Tp.HCM</li>
-                                                        <li>2002-2006: Bs nội trú BM Nội TQ - ĐHYD Tp.HCM</li>
-                                                        <li>2006-2007: Học chuyên khoa Gan mật tại BV Quốc gia Đài Loan - NTUH</li>
-                                                    </ul>
+                                                    <p>1996 - 2002: Bác sĩ đa khoa chính quy - ĐHYD Tp.HCM</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -181,6 +174,9 @@
     });
 </script>
 <style>
+     .accordion-body p{
+        color: black !important;
+     }
     .modal-dialog {
         max-width: 50%;
     }
@@ -358,6 +354,19 @@
 
     /* Responsive Styling */
     @media (max-width: 576px) {
+        .accordion-body p {
+            font-size: 10px;
+        }
+
+        .modal-dialog {
+            max-width: 100%;
+        }
+
+        .doctor-image-modal {
+            width: 80px;
+            height: 100px;
+        }
+
         .doctor-info-modal h5 {
             font-size: 1rem;
         }
@@ -378,6 +387,20 @@
             font-size: 1.1rem;
         }
 
+        .doctor-image-modal {
+            width: 90px;
+            height: 110px;
+        }
+
+
+        .accordion-body p {
+            font-size: 12px;
+        }
+
+        .modal-dialog {
+            max-width: 100%;
+        }
+
         .doctor-info-modal p,
         .schedule-link {
             font-size: 0.8rem;
@@ -385,6 +408,20 @@
     }
 
     @media (min-width: 768px) and (max-width: 992px) {
+        .modal-dialog {
+            max-width: 70%;
+        }
+
+        .doctor-image-modal {
+            width: 100px;
+            height: 120px;
+        }
+
+
+        .accordion-body p {
+            font-size: 14px;
+        }
+
         .doctor-info-modal h6 {
             font-size: 1rem;
         }
@@ -396,6 +433,20 @@
     }
 
     @media (min-width: 992px) {
+        .modal-dialog {
+            max-width: 70%;
+        }
+
+        .doctor-image-modal {
+            width: 150px;
+            height: 150px;
+        }
+
+
+        .accordion-body p {
+            font-size: 16px;
+        }
+
         .doctor-info-modal h6 {
             font-size: 1.2rem;
         }
@@ -403,6 +454,11 @@
         .doctor-info-modal p,
         .schedule-link {
             font-size: 1rem;
+        }
+    }
+    @media (min-width: 1025px) {
+        .modal-dialog {
+            max-width: 50%;
         }
     }
 </style>
